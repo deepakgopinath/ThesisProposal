@@ -1,0 +1,37 @@
+INTRO
+
+Describe why this thesis? 
+	We need more comprehensive models for SA that brings different aspects of HRI under the same mathematical framework. Current models focus on specific aspects of the interactions (task performance, inference, legibility/transparency, safety). Models need not generalize well at all times? 
+
+	What is being proposed?
+		A mathematical framework using Causal Bayesian Network to model human-robot interaction in a shared autonomy. Autonomy, is in essence, an intervention in the network. 
+
+		We hypothesize that information flow between the nodes in the network can be used to quantify different aspects of the human-robot interaction (in terms of better learning, inference, task performance, safety, trust) 
+
+		Autonomy's role is to manipulate the information flow in the network in order to achieve desired objectives. For example, facilitating learning, improving inference capabilities, improving task performance, building trust, enhancing safety etc. 
+
+		More specifically, in my proposed thesis, I plan to utilize the modeling framework to investigate three important problems that arise in the context of shared autonomy. 
+			a) Inference - What is inference? Inferring the probability of latent states. Could be in either direction. For example, autonomy trying to infer human's internal state (goals, knowledge of machine dynamics, skill level) or human trying to infer autonomy's how, what and why the autonomy is doing what it is doing
+
+			b) Learning - Humans learning dynamics of the system. Humans acquiring inverse models for determining the appropriate controller. Autonomy learns about human policy. Human learns about autonomy's policy. Autonomy can facilitate learning by playing the role of a teacher. Form an information standpoint, autonomy intervenes to facilitate learning of the true model of system dynamics, so that skill acquisition is faster. Can possibly help in designing better training phases. 
+
+			c) Task performance - Both objective and subjective aspects are important. Objective measures could be related to task-related reward. Subjective aspects such as transparency, satisfaction could be thought of as something that emerges as a result of 
+Mathematical models for Shared Autonomy
+
+	
+	Aspects of HRI (Soft aspects)
+	Existing Mathematical approaches for HRI
+	Causal Bayesian Network approach
+	Information Theoretic analysis. 
+
+Learning
+
+Inference
+
+Task Performance
+
+
+
+
+
+

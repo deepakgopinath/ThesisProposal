@@ -1,0 +1,342 @@
+\documentclass[12pt]{article}
+
+\usepackage{times}
+\usepackage[final]{changes}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,latexsym,float,epsfig,subfigure}
+\usepackage{mathtools, bbm}
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{lipsum}
+\usepackage[export]{adjustbox}
+\usepackage[normalem]{ulem} % underline
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{balance}
+\usepackage{color}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{algorithm, algorithmic}
+\usepackage{breqn}
+\usepackage{setspace}
+\usepackage[bottom]{footmisc}
+
+%\doublespacing
+
+\newcommand{\argmax}{\arg\!\max}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\DGc}[1]{{\textbf{\color{blue}{#1}}}}
+\newcommand{\POINTS}[1]{{\textbf{\color{red}{#1}}}}
+\definechangesauthor{de}
+
+
+% <http://psl.cs.columbia.edu/phdczar/proposal.html>:
+%
+% The standard departmental thesis proposal format is the following:
+%        30 pages
+%        12 point type
+%        1 inch margins all around = 6.5   inch column
+%        (Total:  30 * 6.5   = 195 page-inches)
+%
+% For letter-size paper: 8.5 in x 11 in
+% Latex Origin is 1''/1'', so measurements are relative to this.
+
+\topmargin      0.0in
+\headheight     0.0in
+\headsep        0.0in
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textheight     9.0in
+\textwidth      6.5in
+
+\title{{\bf Towards an Information Theoretic Analysis of Human-Robot Interaction in Shared Autonomy} \\
+\it Thesis proposal}
+\author{ {\bf Deepak Edakkattil Gopinath}  \\
+Department of Mechanical Engineering \\
+Northwestern University\\
+{\small deepakgopinath@u.northwestern.edu}
+}
+\date{\today}
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{roman}
+\maketitle
+
+\pagebreak
+\begin{abstract}
+Human-Robot Interaction (HRI) in the context of shared autonomy is a rich and complex phenomena. The effectiveness and usefulness of shared-control human-machine systems critically depends on the fluency and efficacy of human-robot interaction. Efficient HRI can lead to an improvement in joint task performance with higher user satisfaction and enhanced trust, all of which are desired characteristics of a joint human-machine system. From an engineer/system designer's perspective, in order to achieve optimal performance the design of autonomy should adequately taken into account the richness, subtleties and complexity of the interaction between the human and the machine.
+
+In this thesis proposal, I plan to propose a mathematical framework for human-robot interaction in the context of shared autonomy that utilizes ideas from probabilistic graphical models and information theory. More specifically, the interaction between human and autonomy will be modeled as coupled perception-action loops unfolding in time using \textit{causal Bayesian Networks}. Within this framework of causal Bayesian Networks, design of autonomy can be thought of as appropriately timed \textit{interventions} at specific parts of model, with an intention to alter the bi-directional information flow between the human and machine. Using the proposed mathematical model, I will research three important problems that arise in HRI namely, a) \textbf{learning} b) \textbf{inference} and c) \textbf{joint task performance}. More specifically, I will focus on the information theoretic analysis of how each of the above mentioned phenomena unfolds during task execution. The eventual goal is to utilize the proposed mathematical framework to inform the design of autonomy that will help \textit{facilitate human learning}, \textit{improve inference accuracy} and \textit{enhance task performance}.
+\end{abstract}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\section{Introduction}
+\label{sec:intro}
+%How robots and machines are ubiquitous in our society?
+
+Robots are ubiquitous in the modern-day society and have revolutionized the relationship between man and machine. Compared to a few decades ago, in the present day, robots have transitioned out of the rigid, structured and specialized industrial environments to the more rich, complex and unpredictable day-to-day human environments and have impacted diverse domains of human endeavor such as healthcare~\cite{laplante1992assistive}, entertainment~\cite{gopinath2016generative} and home robotics~\cite{fischinger2016hobbit}.
+
+
+The impact is even more significant in the domain of assistive and rehabilitation robotics in which the potential to drastically enhance the quality of life for people suffering from motor impairments as a result of spinal cord or brain injuries is immense~\cite{muelling2017autonomy}. Devices such as smart wheelchairs, exoskeletons and assistive robotic arms can help to promote independence, boost self-esteem and help to extend mobility and manipulation capabilities of motor-impaired individuals and can revolutionize how they interact with society~\cite{mataric2007socially}.
+
+%
+%\noindent What is their potential? Specific application in the domain of assistive robotics.
+%One on end of the spectrum robots are passive machines that can perform some task by manual teleoperation by the user. On the other end, we have full autonomy in which the human does not play an active role in task execution. 
+%
+%\noindent What is shared autonomy?
+The standard usage of these assistive machines, however, still relies on manual teleoperation by the human typically enacted through a control interface such as a joystick or a switch-based headarray; that is, in such scenarios robots are not endowed with any intelligence and are treated as \textit{passive} machines that function as extensions of human motor abilities~\cite{simpson2008tooth}. However, one of the most difficult conundrums is that greater the motor impairment of the user, the more limited the interfaces that are available for them to use. As a result, control of these machines can become extremely difficult due to the low dimensionality, sparsity and bandwidth of the control interfaces and are further exacerbated by the inherent complexity in robot dynamics and the physical limitations of the users~\cite{pilarski2012dynamic}.
+In such cases, \textit{robot autonomy}, the ability of robots to accomplish a task independently without requiring explicit instructions from a human, holds considerable promise as a tool to offset (and in some cases restore) the above-mentioned limitations. Advances in the fields of machine learning and artificial intelligence have helped to endow these assistive machines with better decision making and prediction capabilities while interacting with humans in real-world scenarios~\cite{huang2015using}.
+However, in literature there is a growing consensus that users of assistive technologies \textit{do not} prefer to cede full control authority to the robotic partner during task execution~\cite{gopinath2017human}. In such cases, the introduction of \textit{shared autonomy} seeks to find a middle ground between full teleoperation and autonomy by offloading only some aspects of task execution to the autonomy~\cite{wasson2003user, demeester2008user}. 
+
+In a shared autonomy system, the task responsibility is split between the user and autonomy with the aim of reducing human effort in accomplishing a task. HRI	 in the context of shared autonomy is a rich and complex phenomena. The effectiveness and usefulness of shared-control human-machine systems critically depends on the quality and efficiency of human-robot interaction. That is, for robots and humans to work side-by-side and achieve joint goals and accomplish various tasks in a coordinated and cooperative manner, it is imperative that both parties understand each other, communicate and infer internal desires and intentions efficiently~\cite{hoc2001towards}. From an engineering perspective, design of appropriate kinds of autonomous behaviors for a shared-control system, therefore, needs to take into account the dynamics of human-robot interaction during the course of task execution~\cite{hoffman2007cost}. 
+
+Current research approaches for design of shared autonomy systems rely on various kinds of mathematical models to solve different aspects of HRI as independent subproblems and therefore suffer from generalization across tasks, robotic platforms and user types. For my thesis, I am motivated by the desire to develop a \textit{unified} mathematical framework to analyze different aspects of HRI under a single umbrella in an attempt to shed light on the more \textit{fundamental} and \textit{low-level} characteristics of human-robot teaming.
+
+To that end, I plan to propose a mathematical framework that models HRI in the context of shared autonomy utilizing ideas from \textit{probabilistic graphical models}~\cite{koller2009probabilistic} and \textit{information theory}~\cite{cover2012elements}. More specifically, the interaction will be modeled as \textit{coupled perception-action loops} unfolding in time using \textit{causal Bayesian Networks}~\cite{pearl2009causality}. The nodes in the network will represent the different variables (both latent and observed) that are relevant for the model and the edges represent the probabilistic influence they have on each other. In an attempt to quantify the fluency, transparency and cooperation levels that characterize the interaction, emphasis will be placed on analyzing the \textit{information flow} between the nodes in the network~\cite{ay2008information}. Within this proposed framework of causal Bayesian networks, design of autonomy can be thought of as appropriately timed \textit{interventions} that have the potential to alter bidirectional information flow between human and autonomy.
+Our hypothesis is that \textit{information flow} is a more fundamental and low-level descriptor of interaction dynamics and joint system performance that system designers should focus on when designing autonomous behaviors.
+% Efficient task performance, enhanced coordination and transparency can benefit from improved bidirectional information flow between autonomy and humans\DGc{R}.  
+Using the proposed model, I intend to address three main subproblems relevant to shared autonomy namely, \textit{learning}, \textit{inference} and \textit{task performance}.
+
+The first research question (\textbf{RQ1}) that I will address in my work is \textit{how can autonomy help humans learn robot dynamics better}. When a human interacts with a machine in a shared autonomy setting, both parties are continually learning about each others' intentions, plans and actions~\cite{ikemoto2012physical}. For example, for novice users familiarity with the device and knowledge about the dynamics of the control interface and the robot increase with extensive training and practice~\cite{mussaivaldi2000motor}. The initial forward (and inverse) dynamics model that the user maintains internally at the beginning of task execution might be drastically different from the true underlying system dynamics. Due to learning effects, the internal model will likely become closer to the true model. However, the learning strategies that humans adopt need not always be optimal, for example, users might not sample the state and action space in an efficient and exhaustive manner and therefore can erroneously extrapolate the dynamics between different regions of the workspace. Therefore, autonomy can play the role of a \textit{teacher} and help the human in skill acquisition and provide appropriate guidance during the learning process. Potentially, this can have a significant impact in the design of training procedures for new users of assistive robots.
+
+Inherent limitations of the control interface and motor impairments can possibly put an upper bound to skill level that can be acquired. In such scenarios, the need for autonomy for task execution becomes inevitable. However, any successful assistive robotic system needs to have a good idea of the user's needs and intentions. That is, \textit{user intent inference} is a necessary and crucial component to ensure proper assistance~\cite{wang2013probabilistic}. Therefore, the second research question (\textbf{RQ2}) that I will address in my thesis is \textit{how can autonomy assistance be designed so that inference becomes more accurate}. Typically, the user's internal state (desires, goals and intentions) is latent (if not fully, partially) from autonomy's perspective~\cite{kelley2008understanding}. In a shared control setting inference is not a unidirectional phenomena. For example, from the users' perspective the internal logic with which autonomy helps them is not always explicitly known and therefore needs to be inferred as well. User satisfaction and acceptance heavily depends on the user's understanding of how the autonomy works. In this thesis, I plan to utilize the proposed mathematical model to reason about and shape the information flow from the user's internal state to autonomy to improve the inference accuracy. 
+
+In addition to facilitating learning (\textbf{RQ1}), and improving inference accuracy (\textbf{RQ2}), autonomy has to work in conjunction with the human to perform the task optimally. Therefore, the third and final research question (\textbf{RQ3}) that I hope to tackle in this thesis is \textit{how to design autonomy assistance to ensure optimal task performance}. Typically, both subjective (user satisfaction, acceptance, trust) and objective metrics (task completion time, number of mode switches) equally inform the optimality criteria~\cite{gopinath2017human}. Rather than focusing on the above-mentioned metrics independently, in this thesis work I will focus on optimal bidirectional information flow between the human and autonomy. The hypothesis is that optimization of information flow between the autonomy and human will likely result in better communication of latent internal states thereby leading to a common ground for joint task execution. This will likely lead to enhanced cooperation and mutual understanding as a result of which the desired outcomes (better task performance, improved user satisfaction) will likely naturally emerge.
+
+In summary, in this proposed thesis I intend to develop a mathematical framework to model HRI within shared autonomy and plan to research solutions to the questions presented above (\textbf{RQ1}, \textbf{RQ2} and \textbf{RQ3}). I am motivated by the need to develop a unified theoretical framework for shared autonomy. This work will be the first to treat information content and flow as the key components in understanding the dynamics of interaction between human and autonomy. More importantly, this work proposes a fundamentally different way of thinking about autonomy; one in which \textit{autonomy is a exogenous intervention that alters the information flow in a coupled perception-action loop to bring about desired outcomes}.
+%\POINTS{A paragraph on LEARNING}
+
+%\POINTS{A paragraph on INFERENCE mechanisms}
+
+%\POINTS{A paragraph on TASK PERFORMANCE}
+
+%\POINTS{Closing Paragraph}
+%
+%\POINTS{For robots to work alongside humans to help humans and achieve joint goals, requires that both parties understand each other and work together balha blah. Calls for proper analysis of the phenomena}
+
+%\POINTS{HRI is complex. Different types of phenomena unfolds. Maybe picture from presentation talking about the different types of situations. Learning, Inference, Trust, Task Performance. }
+
+%\POINTS{Robotics holds tremendous potential for benefiting every domain of human life. Although this benefit has been limited to very specialized environments such as factories, technology has matured to integrate robotic technologies into the human environment for everyday use. However, this integration cannot be successful without understanding the interaction between robots and humans. Dr. Bilge Mutlu, of the University of Wisconsin-Madison, seeks to enable the creation of acceptable, intuitive, and desirable technologies and their smooth integration by solving technical problems, creating design examples, and mapping out human expectations of and interactions with robotic technologies. By combining computational, human-centered, and design perspectives, he and his team are able to develop new guidelines, methods, and tools that help designers of robotic technologies create products and applications that will revolutionize our future.}
+
+
+
+%\POINTS{Current work focuses on different aspects independently. Suffers from generalizability. In this proposed work, I want to investigate more fundamental and low-level underpinnings of what makes HRI successful in a task-agnostic manner. The goal is to develop a mathematical framework to analyze HRI in a shared autonomy setting. Develop a common mathematical language to talk about the various types of phenomena outlined in the Figure.By taking into account all the subtle aspects of interaction, the design of autonomy will be more informed.} 
+
+
+
+\pagebreak
+
+\section{Human-Robot Interaction in Shared Autonomy}
+\label{sec:HRI_SA}
+
+In this chapter I present a discussion of existing literature on mathematical approaches adopted by researchers for modeling different aspects of HRI in a shared autonomy system.  
+I also briefly discuss how research into softer aspects of HRI such as legibility, transparency, cooperation, attention and coordination in other domains such as cognitive psychology and philosophy help guide the design of effective human-robot teaming strategies. 
+
+%Human-robot interaction within shared autonomy is a rich, complex and multifaceted phenomena. Researchers are interested in building autonomous behaviors for robots that can satisfy various objectives such as legibility\DGc{R}, transparency\DGc{R}, task performance\DGc{R} and enhanced trust\DGc{R} and rely on various types of mathematical frameworks to understand human decision making\DGc{R}, to improve predictive capabilities\DGc{R} and inference efficiency\DGc{R}, to enhance legibility\DGc{R} and clarity of communication\DGc{R} between the agents \textit{et cetera}. In this chapter, I discuss existing mathematical approaches for shared autonomy in literature. I also briefly discussed desired characteristics of human-robot interactions are prescribed by researchers from various related fields. 
+
+\subsection{Mathematical Models for Shared Autonomy}
+In shared autonomy, complementary abilities of humans and robots are leveraged to jointly accomplish various tasks such that the joint system is typically more capable than either the human or the machine on their own. However, there is no one singular definition of what shared autonomy is. In a recent survey paper on shared control Abbink et al. defines shared control as one in which `...\textit{human(s) and robot(s) are interacting congruently in a perception-action cycle to perform a dynamic task, that either the human or the robot could execute individually under ideal circumstances}'~\cite{abbink2018topology}. More importantly, they also propose that in a shared autonomy system, the human and robot actions should be linked by combining them into a final control action, plan or a decision and that each agent should directly perceive how its intent is influenced by the actions of other agent(s). Clearly, human-robot interaction in this context is a complex phenomena and for robots to function properly alongside humans, it becomes imperative that they have the capability to predict their partners actions and intentions effectively using mathematical models. 
+
+Researchers develop mathematical frameworks for various purposes; for example, to model human behavior, to learn autonomous policies from human demonstrations, to recognize objects in the environment and generate waypoints for navigation and grasp poses for manipulation, to determine control allocation and decide how the human and autonomy control commands should be arbitrated to produce the final control command. In the following subsections I present a discuss each of the above-mentioned categories in greater detail.  
+
+\subsubsection{Models for Human Behavior}
+Teamwork in a shared autonomy system is enhanced when the team members understand each other's intentions, desires and goals. However, there are particular challenges that arise in human-robot interaction due to the differences in the mental and physical capabilities of humans and robots~\cite{hiatt2017human}. Robots can deal with such challenges by maintaining models of human cognition and behavior~\cite{javdani2015shared} spanning different timescales and levels. 
+%These models endow the robots with the ability to predict their teammates' actions and therefore make decisions . Thoery of mind allusion?
+
+Hiatt et al. in~\cite{hiatt2017human} utilize `Marr's levels of analysis'~\cite{marr1982vision} to categorize models for human behavior into three distinct categories namely: computational, algorithmic and implementational.
+According to the authors, categorization of human models using Marr's level of analysis clarifies what aspects of human behavior is being modeled. Computational level techniques are ideal for scenarios that benefit from the knowledge of normative behavior that humans are ought to exhibit. These models typically rely on simplistic assumption of perfectly rational behavior and treat human idiosyncrasies and deviations from the norm as observational noise. Algorithmic level analysis, on the other hand, seeks to delve into the processing constraints that agents have and how they lead to systematic errors thereby providing better insight into \textit{why} agents deviate from normative behavior. However, the algorithmic models typically work well over shorter timescales and therefore are not suited for modeling human behavior that last over longer timescales. 
+
+Within the computational category, one of the most common methodologies is to adopt simple probabilistic models that attempt to model very low-level short-time horizon behaviors (such as reaching motions performed by humans during a manipulation task). For example, Dragan et al. assumes a framework in which the human is treated as a optimal agent that noisily optimizes a goal-dependent cost function~\cite{dragan2013policy}. This model is used by the robot to infer user's intent in which the predicted goal is the one with the lowest cost given the user's control input. Optimality principles are particularly attractive because of their success in the domain of motor control~\cite{uno1989formation} and also because they provide a principled approach to how agents ought to behave. The framework, however, requires well-defined cost functions that provide succinct description of the task at hand. Cost functions can either be hard-coded under assumptions of rationality or hand-designed by domain experts (for example, minimization of distance to goal) or can be learned from human demonstrations using techniques such as inverse reinforcement learning~\cite{ziebart2008maximum} and inverse optimal control~\cite{dvijotham2010inverse}. In our work on human-driven customization of shared autonomy levels~\cite{gopinath2017human}, we utilize ideas from optimal control theory to model human behavior in which we assume that humans are acting optimal with respect to an \textit{unknown} cost function. We make no assumptions regarding the nature of cost function but instead provides the human the capability to customize/optimize the control allocation parameters directly. The key insight in this work is that the human has an internal representation of what s/he wants (encoded as a cost function) and therefore by having the human optimize the control allocation parameters directly, the user will tune them to his liking and preference. Similarly, our work on mode switch assistance for intent disambiguation implicitly assumes that the model for human teleoperation of the robot is one in which the human is optimizing for shortest path to goal.
+Data-driven approaches utilizing conventional machine learning algorithms are also successfully used to recognize human behavior in a wide variety of domains such as social robotics~\cite{mataric2007socially} and assistive robotics~\cite{goil2013using}. More recently, data-driven approaches based on Koopman operators have also been utilized to learn models of joint human-machine systems~\cite{broad2018learning}. Koopman operator based approaches scale well to high-dimensional spaces as the computational complexity does not grow with the number of data points. 
+
+%Knowledge-based models can also be utilized to compare human behavior against knowledge-based representations of how different tasks are typically realized in the real world. The downside is that, knowledge-based approaches assume complete domain knowledge \DGc{R}. Furthermore, the models are not robust as the domain knowledge encoded in the models need to be updated manually for slight changes in the environment and as a result struggle with human actions or intentions outside of their knowledge \DGc{R}. 
+
+In general, computational approaches are well suited for situations in which one is primarily concerned about what the human is doing without necessarily reasoning about the underlying causes for the behavior. 
+
+In the algorithmic category, Hidden Markov Models (HMMs) and other Markov-based approaches are common choices for modeling human behavior~\cite{kelley2008understanding}. HMMs are powerful due to their ability to express latent variables and can be used for efficient online inference of hidden states given a set of observations. An extension of HMMs that can be useful for modeling human-robot collaboration is the Partially Observable Markov Decision Process (POMDP)~\cite{taha2011pomdp}. For example, POMDP based models are used for assessing the human partner's trust in the autonomous partner~\cite{chen2018planning}. 
+%Solving a POMDP amounts to the computation of the optimal policy (probability distribution over actions given state) executed by the agent~\cite{pineau2003point}. 
+POMDPs can also be used by autonomy in which the human intent are treated as latent states. By performing online inference on these latent states, autonomy will have the ability to incorporate human intentions (desired goals) into its own decision making process thereby implicitly taking into account user preferences. In general, inference over latent variables in a POMDP framework is performed via Bayesian methods in which a prior distribution over the latent variables is updated via Bayes Theorem upon receiving new evidence. The choice of likelihood function, typically encodes the human's actions/preferences give a state (policy)~\cite{dragan2012formalizing}. In our work, we have relied on heuristic approaches based on simple directedness and proximity based confidence functions to estimate reaching intent in a table-top manipulation tasks~\cite{gopinath2017human}. In order to incorporate information from past states, in my previous work, I have also developed a framework for intent recognition based on ideas from \textit{Dynamic Field Theory}~\cite{schoner1995dynamics} in which the time-evolution of the probability distribution over intent is specified as a constrained dynamical system~\cite{gopinathdynamic}. The activation function that drives the dynamical system plays a role akin to that of the likelihood function in Bayesian approaches in that it encodes the human's preferences. Additionally, in the domain of autonomous driving, I have developed a framework to learn agent models from partial observations that will help to predict their actions from noisy observations and deduce missing information about their environment. The probabilistic models for partially observed agents are learned via IRL techniques through which we recover the agent's policy and reward structure. Within the model, efficient inference of latent states and actions is made possible by learning specific proposal distributions\cite{gu2015neural} to be used within an Reversible Jump Markov Chain Monte Carlo (RJMCMC) sampling process~\cite{green1995reversible}. 
+
+A generalization of HMMs, known as Dynamic Bayesian Networks (DBNs) have also been used successfully to model human robot collaboration. DBNs are attractive due to their ability to handle multi-variate, mixed-observability variables and to represent the interdependencies between them at same as well as different time slices\cite{murphy2002dynamic}. DBNs have been successfully utilized to model human beliefs, desires and learning which can then be used for intent prediction and understanding cognitive phenomena such as concept learning\cite{tahboub2006intelligent}. However, structure of DBNs need to pre-specified by a domain expert and learning the parameters requires large amounts of data. 
+
+\subsubsection{Models for Policy Generation}
+
+Mathematical models are widely used for generating/learning policies responsible for generating autonomy's control actions. In addition to accomplishing the task at hand, HRI would benefit from the autonomous partner's actions to be legible, natural, and safe. Learning from Demonstration (LfD)~\cite{argall2009survey} provides a framework to learn autonomous policies directly from user-provided demonstration data. For example, in imitation learning (IL) paradigms can be utilized to develop end-to-end systems that can directly map a high dimensional state to actions~\cite{bojarski2016end}. A more generalizable approach is to cast the problem with the framework of inverse reinforcement learning in which the goal of the algorithm is to recover the user's reward function~\cite{ziebart2008maximum}.  Policies that optimize long-term accumulated reward (solution of the forward reinforcement learning (RL) problem) improves the robustness and generalization capabilities of the autonomous partner. Closely related to the RL approach is to utilize control theoretic framework to derive optimal policies for a given task. Standard optimal control theory techniques are model-based, that is, they presume the existence of a dynamics model and solve for the optimal policy with respect to a specified cost function~\cite{kirk1970optimal}. State-of-the-art RL techniques, on the other hand, can be model-free and can resort to sampling-based techniques to derive optimal policies~\cite{watkins1992q}. 
+
+Planning-based approaches such as probabilistic road maps~\cite{kavraki1996analysis} and RRT~\cite{kuffner2000rrt} are also widely used for generating motion plans (for both robotic manipulators as well as mobile robots). In addition to task accomplishment, in order to enhance user experience robot motion plans typically need to possess various other desired characteristics. HRI in shared autonomy can become more seamless if the robot is able to make its intentions legible to the user. To that end researchers have attempted to mathematically define legibility and predictability of robot motion~\cite{dragan2013legibility}. Similarly, safety is of paramount importance when robots work in close proximity to humans. Therefore behaviors such as obstacle avoidance are incorporated into navigation plans~\cite{storms2014blending}. To this end, the on-board perception system typically relies on object detection and recognition models to identify objects of interest and obstacles thereby characterizing favorable and unfavorable parts of the state space of the robot~\cite{muller2006off}. In my work, I have utilized potential fields defined in the full six degrees-of-freedom Cartesian space (task space) to generate the robot control commands. Obstacle avoidance is implemented using velocity-dependent repellers and the intended goal is modeled as the attractor. Potential fields are computationally lightweight and produces more intuitive trajectories that correspond to straight line paths in Euclidean space~\cite{khatib1986real}. More recent work from utilized ideas from differential geometry to treat obstacles as local deformation in the geometry of the workspace and aims to derive motion policies directly in a curved Riemannian workspace~\cite{ratliff2018riemannian}. The effect of the obstacle is to curve the geodesics (straight line paths) around itself as determined by the local curvature induced by the obstacle~\cite{mainprice2016warping}. 
+\subsubsection{Models for Control Allocation}
+
+In a shared control setting task responsibility is shared between the human and autonomy. Therefore, control allocation, that is, how exactly should control be arbitrated between the human and autonomous partner, needs to appropriately implemented for desired outcomes. Different approaches exist for sharing control between the human and autonomy that depend on the application domain, user preferences and robot platform. 
+Broadly speaking, shared control approaches can be broadly classified into three categories: hierarchical, blending-based and control partition based approaches. 
+
+In the hierarchical paradigm, control allocation typically occurs at the task level in which higher level task goals are entrusted with the human and the autonomy takes care of the low-level control of the robot. For example, in the assistive domain smart wheelchair users can use a click-based interface~\cite{simpson2008tooth} to a select a desired destination in the world or a laser pointer~\cite{choi2008laser} to point to a desired goal and the autonomy can generate the global as well as local plans utilizing any state-of-the-art motion planners. In the domain of table-top manipulation users can use natural language to specify the desired grasp or reach target which then combined with a object recognition and motion planning modules can produce the desired robot trajectory~\cite{broad2016towards}. 
+
+Blending-based approaches seek to arbitrate between human and autonomy actions at the control signal level (or the policy level) directly. In~\cite{dragan2013policy} Dragan et al. introduce the policy blending formalism for shared control in which the authors propose that ``arbitration should be contextual and the should depend on the robot's confidence in itself and in the user, as well as on the particulars of the user". A commonly used arbitration scheme is one in which the final control command issued to the robot is a linear combination of human and autonomy control commands. The blending parameter can be fixed or can be a parameterized function of the context and the autonomy's confidence in its prediction of the user's intent. In our work on human-in-the-loop customization of control allocation parameters we utilize a blending-based shared control in which the linear blending factor is a function of the probability of the predicted goal (agnostic to the type of intent inference algorithm used). We assume a piecewise-linear function and under the assumption that the human is optimizing an unknown cost function, we develop an iterative procedure with which the user is able to tune the arbitration function parameters to the his/her own satisfaction and preference~\cite{gopinath2017human}. By casting shared control allocation in a broader theoretical framework, Trautman has proposed a mathematical model for probabilistic shared control in complex dynamic environments~\cite{trautman2015assistive}. In this work, the interactive relationship between the human, autonomy and the environment is modeled as a undirected graphical model. The paper also introduces the notion of an \textit{interaction} function between the operator and the autonomy that captures the ``agreeability" between the human and autonomy. For specific forms of the interaction function, Trautman is able to recover linear blending as a special case of the more general framework and shows that in general, linear blending is suboptimal with respect to the joint metric of agreeability, safety and efficiency. 
+
+In the domain of assistive robotics, there exists yet another particularly challenging problem. The standard usage of these assistive machines relies on manual teleoperation typically enacted through a control interface such as a joystick. However, the greater the motor impairment of the user, the more limited are the interfaces available for them to use. These interfaces (for example, sip-and-puffs and switch-based head arrays) are low-dimensional, discrete interfaces that can only operate in subsets of the entire control space (referred to as \textit{control modes}). The dimensionality mismatch between the interface and the robot's controllable degrees-of-freedom (DoF) necessitates the user to switch between control modes during teleoperation and has been shown to add to the cognitive and physical burden and affects task performance negatively~\cite{pilarski2012dynamic}.
+In order to offset the drop in performance due to shifting focus (also known as task switching) from the task at hand due to switching between different control modes various mode switch assistance paradigms have been proposed. A simple time-optimal mode switching scheme has shown to improve task performance~\cite{herlant2016assistive}. Machine learning techniques have been utilized to learn mappings from robot state to control modes preferred by human users~\cite{jainrobot}. Robot operation in certain control modes can also help the autonomy to infer the user's intent more accurately and confidently, especially in scenarios where autonomy's inference of user intent is exclusively informed by human's control commands issued via the limited control interfaces. To that end, in our work, on mode switch assistance for intent disambiguation we developed a disambiguation metric to characterize the intent disambiguation capabilities of a control dimension/control mode. By having the user operate the robot in the disambiguating control mode, the control commands become more \textit{intent-expressive} and as a result autonomy is able to step in and provide appropriate assistance. In this work, we also introduce the notion of \textit{inverse legibility}, in which the roles are switched and the human-generated actions \textit{help the robot} to infer human intent confidently and accurately~\cite{gopinath2017mode}. 
+
+\subsection{Desired Characteristics of HRI (Could have a better subsection title)}
+Humans are highly adept at working together in teams and are able to effectively coordinate and cooperate with their teammates in a seamless, natural and fluid manner in a joint task setting. How exactly are humans able to interact efficiently in a team setting?  What do humans prioritize, besides successful task accomplishment, when working alongside others? What are some fundamental characteristics of any successful team? Researchers in the fields of cognitive psychology and  philosophy have been long interested in these questions. 
+%Human-robot interaction researchers and roboticists equally benefit from the insights that psychologists and philosophers have had into these questions. 
+
+It has been widely established that one of the most essential components for successful teamwork is the need for efficient communication between the members of the team and the need for a shared context and intentionality between the team members~\cite{tomasello2007shared}. Research in developmental psychology have established that humans develop the ability to share goals and intentions with others very early in life and is widely exhibited in the context of cooperative activity. Tomasello et al. in~\cite{tomasello2007shared} claims that human ability to share intentions arise from two main capabilities. First, humans have the capability to infer the latent internal states of other agents from observations of their behavior. Second, humans also have the motivation to share mental states which forms the basis of cooperative activity. Bratman points out that \textit{shared cooperative activity} is an important and recognizable characteristic of everyday human life. Some of the examples from everyday life include, playing a sport together, performing a musical piece with an orchestra \textit{et cetera}. Bratman proceeds to identify three important characteristics of shared cooperative activity namely a) mutual responsiveness b) commitment of joint activity and c) commitment to mutual support~\cite{bratman1992shared}. A related concept is how individuals partaking in a joint activity develop what is known as \textit{common ground}---``that is, the knowledge, beliefs and suppositions they believe they share about the activity"~\cite{clark1996using}. The theory of common ground was originally developed to understand communication between people and its main assumption is that effective communication requires coordination that elies on shared knowledge to reach mutual understanding.  Common ground and mutual understanding between partners typically increase over time as a result of learning from continued interactions and can lead more seamless interaction.
+
+Application of social, psychological and cognitive theories of interactions to the domain of human-robot interaction has been successful to a large extent and has contributed to advances in the `science' of human-robot interaction. Kiesler in~\cite{kiesler2005fostering} shows how the theory of `common ground' can be applied to scenarios in which robots interact with people in public spaces and reinforces the need for shared mental models to form common ground. In~\cite{klien2004ten} Klein et al. outline ten challenges that exist for making an autonomous partner a ``team player'', one of which is the need for autonomous partners to be ``..reasonably predictable and reasonably able to predict others' actions". This points to the need for transparent, legible and predictable robot actions that will likely have a positive impact on the users' perceived trust, satisfaction and comfort level. The need for transparency in communication in order to promote shared awareness and intent has also been studied by Lyons et al. in~\cite{lyons2014transparency}. Fluency is yet another important aspect of a successful collaboration. Hoffman et al. has proposed a model for joint human robot action in which the robot makes anticipatory decisions based on the confidence of their validity and relative risk in an attempt to improve the fluency of human-robot interaction~\cite{hoffman2007cost}. They make the observation that fluency is not necessarily always related to task efficiency and therefore requires more rigorous quantitative treatment and to that end propose three different fluency metrics as well. Another common paradigm for formalizing human robot interaction is the turn-taking paradigm. Thomaz et al. propose a first-order Markov process based model to describe the turn-turning dynamics between a human and a social robot. One of their primary findings is that human turn-taking behavior is mainly influenced by information flow~\cite{thomaz2011turn}. However, the authors don't present a quantitative treatment of the information flow. Drawing influences from research in the human factors community, Nikolaidis et al. have developed human-robot teaming models that are shared between the team members~\cite{nikolaidis2012human}. This work is an attempt to build shared mental models that have shown to improve team performance and task efficiency. In their work, the robot derives a team mental model described as a POMDP from observations of coordinated team work performed by two or more expert humans. 
+
+In recent years, researchers from the design space have also emphasized the need for user-centric development of shared autonomy systems. This is particularly important in the domain of assistive robotics in which the transition of the technology into the real world depends a great deal on user satisfaction and acceptance. For assistive technologies to be successfully adopted it is clear that various research components must come together in a seamless manner. These components range from design of software and hardware modules, appropriate human-robot interaction schemes and other technical aspects such as efficient algorithms, sensor technologies and control interface design. In our work, we have recognized this need for convergence of research directions, in which end-users play an active role in the iterative design process~\cite{egli2016call}. 
+
+
+\subsection{Summary}
+
+Human-robot interaction is a highly interdisciplinary field drawing influences from a variety of domains such as computer science, machine learning, cognitive psychology and philosophy. From the above presented survey of related literature, we can see that researchers have explicitly made use of mathematical models to deal with a variety of problems that arise HRI such as modeling human behavior, generating appropriate policies for autonomy, for determining the type and level of assistance and to perceive and making sense of the environment. On the other hand, adoption of ideas from cognitive psychology provides a prescriptive framework that can guide engineers to design autonomous behavior with desirable characteristics. 
+
+Some of the recurring themes that are emphasized throughout literature relates to the need for shared mental models, efficient and transparent communication, mutual responsiveness, having the need for common ground and the ability to understand each other's intentions, desires and goals for enhancing the quality of HRI. These ideas provide a solid theoretical basis for engineering practical shared autonomy systems. However, to the best of my knowledge a thorough mathematical characterization of the above mentioned `softer aspects of HRI' still do not exist. Currently, the computational approach that researchers adopt to solve human-robot interaction decomposes the large picture into smaller subproblem that are tackled independent of each other. 
+
+Due to the paramount importance of efficient coordination between a human and a robot in a shared autonomy system, typically facilitated by the exchange large amounts of relevant information (via different modalities), I strongly think that information theoretic analysis of the interactions can shed light on the efficiency, transparency and legibility of communication. To that end, in this thesis I propose a mathematical framework based on causal Bayesian Networks to analyse HRI 
+with an emphasis on information theoretic analysis of interactions between the nodes in the network. Within this framework \textit{information flow and exchange} assumes a more foundational and fundamental role and autonomy's influence on the interaction will be treated as an external intervention that will drive the interaction dynamics to have desired characteristics. In the following chapter, I will introduce the causal Bayesian Network based mathematical framework for studying HRI and a primer on some of the relevant concepts from information theory. 
+
+% 
+%What is missing, is a mathematical characterization of these foundational aspects. If common ground principle is important for successful HRI and common ground resulkts from coordination that requires exchange of large amounts of relevant information, then, it is likely that information theory can be highly useful for providing a mathematical characterization of collaboration, coordination and common ground in HRI
+%
+%
+%
+%\DGc{Create a seamless link between human-human interaction studies to human-robot interaction studies}
+%According to Bratman, in humans, shared intentionality allows humans to perform three important functions: a) coordination of intentional actions b) coordination of planning and c) and can provide contextual structure that promotes relevant bargaining. 
+
+%Need for efficient communication and information exchange and transparency
+%
+%Need for fluency?
+%
+%Shared Mental Models
+%
+%Joint Attention
+%
+%User-centric system development. 
+
+\pagebreak
+\section{Proposed Modeling Framework for HRI in Shared Autonomy}
+\subsection{Causal Bayesian Networks for HRI}
+\subsection{Primer on Information Theory}
+
+\pagebreak
+\section{Proposed Studies}
+\subsection{Inference}
+
+\subsection{Learning}
+
+\subsection{Task Performance}
+
+%\subsection{Aspects of HRI}
+%
+%Softer aspects of HRI that are studied. Prescriptive models for HRI. 
+%
+%What makes HRI more 'natural' and fluid?
+%
+%The need for communication is established in 22 and 24 reference.  in Nikolaidis and Julie Shah
+%Importance of legibility, communication, information exchange, transparency etc. 
+%
+%GUY HOFFMAN - FLuency. Fluency metrics. Do they all have an information theoretic angle to them?
+%
+%Joint attention. Initiating, responding, and ensuring. Relate joint attention processes to information transfer. Joint attention is related to transparency. If there is some sort of connection between joint attention and information flow then transparency is also related to informatoin flow between agents. 
+%
+%Transparency related papers. Opinion articles.
+%
+%Charcaterization of HRI paper. REview papers.  
+%
+%Lyons and Havig Paper. Models for transparency.
+%
+%USer- centric system development to prioritize user preferences etc. My paper RSS 2016, Wheelchair paper HRI Social psychology. Proxemics.
+% 
+%\subsection{Causal Bayesian Networks for Modeling HRI}
+%
+%
+%Notion of perception action loops as expounded in the review paper. Shared control vs. Traded control. 
+%Living beings, robotic systems as agents perceiving and acting upon the environment. 
+%
+%Perception Action Loop. Constant exchange of information between agent and environment. Reference to Klyubin's work. 
+%Specify how is it different from my proposal. 
+%Page 8 in Capdeduy Thesis. 
+%
+%How information is accessed, stored and processed becomes important for the emergence of cognitively sensible behavior. \textit{Empowerment} has been looked at. 
+%
+%Multiple agents imply that there are multiple perception action loops interacting and co-existing. Environment of one agent will includes the other agents. 
+%
+%Multi-agent systems as a multi coupled perception action loops. Reference Philip Capdeduy's work. 
+%
+%Philip Capdeduy looks into this idea in the context of multiple artificial agents. Here we are adopting it to the case of human-robot interaction. 
+%
+%Bayesian Networks and Causal Bayesian Networks. 
+%
+%Coupled PA loops are Causal Bayesian Networks. Reference Klyubin, Polani et al. 
+%
+%Identify the nodes. Give an example model (This would look like the content in Klyubin et al. ). Identify different subnetworks as intuitive components of an HRI system. Ground the learning, inference and task performance problem by relating it to either inferring on improving some aspect of the network. 
+%
+%Introduce notions of information flow and why it would be useful in this context? What does it correspond to. 
+%
+%Introduce the notion of intervention in the sense of Judea Pearl and make a distinct. 
+%
+%Connect autonomy design to intervention and autonomy as a way to manipulate information flow 
+%
+%\subsection{Information Theory and Flow in CBNs}
+%
+%Short chapter that serves as the primer for information theory. 
+%
+%Basic concepts of entropy, joint entropy, cross entropy, mutual information, transfer entropy, information flow in CBNs. 
+%
+%After mathematical introduction of the above-mentioned concepts justify why these metrics are 
+%
+%Information as a currency of life? Polani ideas?
+%
+%
+%\pagebreak
+%\section{Proposed Work}
+%\subsection{Inference}
+%Different types of inference. Make inference easier by becoming more legible, transparent. Bidirectional intent inference. We are focused on human to machine. DEvelop information theoretical framework for goal disambiguation. 
+%\subsubsection{Related Work}
+%\subsubsection{Experiment Design}
+%\subsection{Learning}
+%Guided Active Learning. Where the autonomy is the guide. Human do active learning (tinkering) on their own. Autonomy, plays the role of a teacher/guide and guides the active exploration so that the rate of learning is higher for the human. 
+%\subsubsection{Related Work}
+%\subsubsection{Experiment Design}
+%\subsection{Task Performance}
+%\subsubsection{Related Work}
+%\subsubsection{Experiment Design}
+%
+%\section{Timeline}
+%\begin{table}[hc]
+%\begin{small}
+%\begin{center}
+%\begin{tabular}{lll}
+%Timeline & Work & Progress\\
+%\hline
+%          & XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX & completed\\
+%Nov. xxxx & XXXXXXXXXXXXXXXXXXXXXXXXXXX & ongoing\\
+%Jan. xxxx & Thesis writting & \\
+%Feb. xxxx & Thesis defense & \\
+%\end{tabular}
+%\end{center}
+%\end{small}
+%\caption{Plan for completion of my research}
+%\label{tab:plan}
+%\end{table}
+%
+%Thus, I plan to defend my thesis in XXX XXXX.
+
+
+\begin{footnotesize}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{footnotesize}
+
+\end{document}
+
+

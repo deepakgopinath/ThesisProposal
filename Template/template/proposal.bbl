@@ -1,0 +1,416 @@
+\begin{thebibliography}{10}
+
+\bibitem{abbink2018topology}
+David~A Abbink, Tom Carlson, Mark Mulder, Joost~CF de~Winter, Farzad Aminravan,
+  Tricia~L Gibo, and Erwin~R Boer.
+\newblock A topology of shared control systems—finding common ground in
+  diversity.
+\newblock {\em IEEE Transactions on Human-Machine Systems}, (99):1--17, 2018.
+
+\bibitem{argall2009survey}
+Brenna~D Argall, Sonia Chernova, Manuela Veloso, and Brett Browning.
+\newblock A survey of robot learning from demonstration.
+\newblock {\em \textit{Robotics and Autonomous Systems}}, 57(5):469--483, 2009.
+
+\bibitem{ay2008information}
+Nihat Ay and Daniel Polani.
+\newblock Information flows in causal networks.
+\newblock {\em Advances in complex systems}, 11(01):17--41, 2008.
+
+\bibitem{bojarski2016end}
+Mariusz Bojarski, Davide Del~Testa, Daniel Dworakowski, Bernhard Firner, Beat
+  Flepp, Prasoon Goyal, Lawrence~D Jackel, Mathew Monfort, Urs Muller, Jiakai
+  Zhang, et~al.
+\newblock End to end learning for self-driving cars.
+\newblock {\em arXiv preprint arXiv:1604.07316}, 2016.
+
+\bibitem{bratman1992shared}
+Michael~E Bratman.
+\newblock Shared cooperative activity.
+\newblock {\em The philosophical review}, 101(2):327--341, 1992.
+
+\bibitem{broad2016towards}
+Alexander Broad, Jacob Arkin, Nathan Ratliff, Thomas Howard, Brenna Argall, and
+  Distributed~Correspondence Graph.
+\newblock Towards real-time natural language corrections for assistive robots.
+\newblock In {\em RSS Workshop on Model Learning for Human-Robot
+  Communication}, 2016.
+
+\bibitem{broad2018learning}
+Alexander Broad, Todd Murphey, and Brenna Argall.
+\newblock Learning models for shared control of human-machine systems with
+  unknown dynamics.
+\newblock {\em arXiv preprint arXiv:1808.08268}, 2018.
+
+\bibitem{chen2018planning}
+Min Chen, Stefanos Nikolaidis, Harold Soh, David Hsu, and Siddhartha Srinivasa.
+\newblock Planning with trust for human-robot collaboration.
+\newblock In {\em Proceedings of the 2018 ACM/IEEE International Conference on
+  Human-Robot Interaction}, pages 307--315. ACM, 2018.
+
+\bibitem{choi2008laser}
+Young~Sang Choi, Cressel~D. Anderson, Jonathan~D. Glass, and Charles~C. Kemp.
+\newblock Laser pointers and a touch screen: intuitive interfaces for
+  autonomous mobile manipulation for the motor impaired.
+\newblock In {\em \textit{Proceedings of the International SIGACCESS Conference
+  on Computers and Accessibility}}, 2008.
+
+\bibitem{clark1996using}
+HH~Clark.
+\newblock Using language. new york, ny, us, 1996.
+
+\bibitem{cover2012elements}
+Thomas~M Cover and Joy~A Thomas.
+\newblock {\em Elements of information theory}.
+\newblock John Wiley \& Sons, 2012.
+
+\bibitem{demeester2008user}
+Eric Demeester, Alexander H{\"u}ntemann, Dirk Vanhooydonck, Gerolf Vanacker,
+  Hendrik Van~Brussel, and Marnix Nuttin.
+\newblock User-adapted plan recognition and user-adapted shared control: A
+  bayesian approach to semi-autonomous wheelchair driving.
+\newblock {\em \textit{Autonomous Robots}}, 24(2):193--211, 2008.
+
+\bibitem{dragan2013legibility}
+Anca~D. Dragan, Kenton~CT. Lee, and Siddhartha~S. Srinivasa.
+\newblock Legibility and predictability of robot motion.
+\newblock In {\em \textit{Proceedings of the ACM/IEEE International Conference
+  on Human-Robot Interaction (HRI)}}, 2013.
+
+\bibitem{dragan2012formalizing}
+Anca~D. Dragan and Siddhartha~S. Srinivasa.
+\newblock {\em Formalizing assistive teleoperation}.
+\newblock MIT Press, 2012.
+
+\bibitem{dragan2013policy}
+Anca~D. Dragan and Siddhartha~S. Srinivasa.
+\newblock A policy-blending formalism for shared control.
+\newblock {\em \textit{The International Journal of Robotics Research}},
+  32(7):790--805, 2013.
+
+\bibitem{dvijotham2010inverse}
+Krishnamurthy Dvijotham and Emanuel Todorov.
+\newblock Inverse optimal control with linearly-solvable mdps.
+\newblock In {\em Proceedings of the 27th International Conference on Machine
+  Learning (ICML-10)}, pages 335--342, 2010.
+
+\bibitem{egli2016call}
+Gopinath~Deepak Egli, Pascal~Arturo and Brenna Argall.
+\newblock A call for convergence of research directions in assistive robotics.
+\newblock In {\em RSS Workshop on Socially and Physically Assistive Robotics
+  for Humanity, Ann Arbor, Michigan, USA}.
+
+\bibitem{fischinger2016hobbit}
+David Fischinger, Peter Einramhof, Konstantinos Papoutsakis, Walter Wohlkinger,
+  Peter Mayer, Paul Panek, Stefan Hofmann, Tobias Koertner, Astrid Weiss,
+  Antonis Argyros, et~al.
+\newblock Hobbit, a care robot supporting independent living at home: First
+  prototype and lessons learned.
+\newblock {\em Robotics and Autonomous Systems}, 75:60--78, 2016.
+
+\bibitem{goil2013using}
+Aditya Goil, Matthew Derry, and Brenna~D Argall.
+\newblock Using machine learning to blend human and robot controls for assisted
+  wheelchair navigation.
+\newblock In {\em Rehabilitation Robotics (ICORR), 2013 IEEE International
+  Conference on}, pages 1--6. IEEE, 2013.
+
+\bibitem{gopinath2017mode}
+Deepak Gopinath and Brenna Argall.
+\newblock Mode switch assistance to maximize human intent disambiguation.
+\newblock In {\em \textit{Robotics: Science and Systems}}, 2017.
+
+\bibitem{gopinathdynamic}
+Deepak Gopinath and Brenna~D Argall.
+\newblock Dynamic neural fields for short-term behavior recognition from motion
+  cues.
+\newblock In {\em Proceedings of Human-Robot Interaction 2018 Workshop on
+  Social Human-Robot Interaction of Human-care Service Robots (HRI), Chicago,
+  Illinois}. ACM, 2018.
+
+\bibitem{gopinath2017human}
+Deepak Gopinath, Siddarth Jain, and Brenna~D. Argall.
+\newblock Human-in-the-loop optimization of shared autonomy in assistive
+  robotics.
+\newblock {\em \textit{IEEE Robotics and Automation Letters}}, 2(1):247--254,
+  2017.
+
+\bibitem{gopinath2016generative}
+Deepak Gopinath and Gil Weinberg.
+\newblock A generative physical model approach for enhancing the stroke palette
+  for robotic drummers.
+\newblock {\em Robotics and Autonomous Systems}, 86:207--215, 2016.
+
+\bibitem{green1995reversible}
+Peter~J Green.
+\newblock Reversible jump markov chain monte carlo computation and bayesian
+  model determination.
+\newblock {\em Biometrika}, 82(4):711--732, 1995.
+
+\bibitem{gu2015neural}
+Shixiang~Shane Gu, Zoubin Ghahramani, and Richard~E Turner.
+\newblock Neural adaptive sequential monte carlo.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  2629--2637, 2015.
+
+\bibitem{herlant2016assistive}
+Laura~V. Herlant, Rachel~M. Holladay, and Siddhartha~S. Srinivasa.
+\newblock Assistive teleoperation of robot arms via automatic time-optimal mode
+  switching.
+\newblock In {\em \textit{Proceedings of the ACM/IEEE International Conference
+  on Human-Robot Interaction (HRI)}}, 2016.
+
+\bibitem{hiatt2017human}
+Laura~M Hiatt, Cody Narber, Esube Bekele, Sangeet~S Khemlani, and J~Gregory
+  Trafton.
+\newblock Human modeling for human--robot collaboration.
+\newblock {\em The International Journal of Robotics Research},
+  36(5-7):580--596, 2017.
+
+\bibitem{hoc2001towards}
+Jean-Michel Hoc.
+\newblock Towards a cognitive approach to human--machine cooperation in dynamic
+  situations.
+\newblock {\em International journal of human-computer studies},
+  54(4):509--540, 2001.
+
+\bibitem{hoffman2007cost}
+Guy Hoffman and Cynthia Breazeal.
+\newblock Cost-based anticipatory action selection for human--robot fluency.
+\newblock {\em IEEE transactions on robotics}, 23(5):952--961, 2007.
+
+\bibitem{huang2015using}
+Chien-Ming Huang, Sean Andrist, Allison Saupp{\'e}, and Bilge Mutlu.
+\newblock Using gaze patterns to predict task intent in collaboration.
+\newblock {\em Frontiers in psychology}, 6:1049, 2015.
+
+\bibitem{ikemoto2012physical}
+Shuhei Ikemoto, Heni~Ben Amor, Takashi Minato, Bernhard Jung, and Hiroshi
+  Ishiguro.
+\newblock Physical human-robot interaction: Mutual learning and adaptation.
+\newblock {\em IEEE robotics \& automation magazine}, 19(4):24--35, 2012.
+
+\bibitem{jainrobot}
+Siddarth Jain and Brenna Argall.
+\newblock Robot learning to switch control modes for assistive teleoperation.
+\newblock In {\em RSS Workshop on Planning for Human-Robot Interaction: Shared
+  Autonomy and Collaborative Robotics}.
+
+\bibitem{javdani2015shared}
+Shervin Javdani, Siddhartha~S Srinivasa, and J~Andrew Bagnell.
+\newblock Shared autonomy via hindsight optimization.
+\newblock {\em arXiv preprint arXiv:1503.07619}, 2015.
+
+\bibitem{kavraki1996analysis}
+Lydia~E Kavraki, Mihail~N Kolountzakis, and J-C Latombe.
+\newblock Analysis of probabilistic roadmaps for path planning.
+\newblock In {\em Robotics and Automation, 1996. Proceedings., 1996 IEEE
+  International Conference on}, volume~4, pages 3020--3025. IEEE, 1996.
+
+\bibitem{kelley2008understanding}
+Richard Kelley, Alireza Tavakkoli, Christopher King, Monica Nicolescu, Mircea
+  Nicolescu, and George Bebis.
+\newblock Understanding human intentions via hidden markov models in autonomous
+  mobile robots.
+\newblock In {\em \textit{Proceedings of the 3rd ACM/IEEE International
+  Conference on Human Robot Interaction}}, pages 367--374. ACM, 2008.
+
+\bibitem{khatib1986real}
+Oussama Khatib.
+\newblock Real-time obstacle avoidance for manipulators and mobile robots.
+\newblock {\em \textit{The International Journal of Robotics Research}},
+  5(1):90--98, 1986.
+
+\bibitem{kiesler2005fostering}
+Sara Kiesler.
+\newblock Fostering common ground in human-robot interaction.
+\newblock In {\em Robot and Human Interactive Communication, 2005. ROMAN 2005.
+  IEEE International Workshop on}, pages 729--734. IEEE, 2005.
+
+\bibitem{kirk1970optimal}
+Donald~E Kirk.
+\newblock {\em Optimal control theory: an introduction}.
+\newblock Springer, 1970.
+
+\bibitem{klien2004ten}
+Glen Klien, David~D Woods, Jeffrey~M Bradshaw, Robert~R Hoffman, and Paul~J
+  Feltovich.
+\newblock Ten challenges for making automation a" team player" in joint
+  human-agent activity.
+\newblock {\em IEEE Intelligent Systems}, 19(6):91--95, 2004.
+
+\bibitem{koller2009probabilistic}
+Daphne Koller, Nir Friedman, and Francis Bach.
+\newblock {\em Probabilistic graphical models: principles and techniques}.
+\newblock MIT press, 2009.
+
+\bibitem{kuffner2000rrt}
+James~J Kuffner and Steven~M LaValle.
+\newblock Rrt-connect: An efficient approach to single-query path planning.
+\newblock In {\em Robotics and Automation, 2000. Proceedings. ICRA'00. IEEE
+  International Conference on}, volume~2, pages 995--1001. IEEE, 2000.
+
+\bibitem{laplante1992assistive}
+Mitchell~P LaPlante et~al.
+\newblock Assistive technology devices and home accessibility features:
+  prevalence, payment, need, and trends.
+\newblock {\em \textit{Advance Data from Vital and Health Statistics}}, 1992.
+
+\bibitem{lyons2014transparency}
+Joseph~B Lyons and Paul~R Havig.
+\newblock Transparency in a human-machine context: Approaches for fostering
+  shared awareness/intent.
+\newblock In {\em International Conference on Virtual, Augmented and Mixed
+  Reality}, pages 181--190. Springer, 2014.
+
+\bibitem{mainprice2016warping}
+Jim Mainprice, Nathan Ratliff, and Stefan Schaal.
+\newblock Warping the workspace geometry with electric potentials for motion
+  optimization of manipulation tasks.
+\newblock In {\em Intelligent Robots and Systems (IROS), 2016 IEEE/RSJ
+  International Conference on}, pages 3156--3163. IEEE, 2016.
+
+\bibitem{marr1982vision}
+David Marr.
+\newblock Vision: A computational investigation into the human representation
+  and processing of visual information. mit press.
+\newblock {\em Cambridge, Massachusetts}, 1982.
+
+\bibitem{mataric2007socially}
+Maja~J Matari{\'c}, Jon Eriksson, David~J Feil-Seifer, and Carolee~J Winstein.
+\newblock Socially assistive robotics for post-stroke rehabilitation.
+\newblock {\em Journal of NeuroEngineering and Rehabilitation}, 4(1):5, 2007.
+
+\bibitem{muelling2017autonomy}
+Katharina Muelling, Arun Venkatraman, Jean-Sebastien Valois, John~E Downey,
+  Jeffrey Weiss, Shervin Javdani, Martial Hebert, Andrew~B Schwartz, Jennifer~L
+  Collinger, and J~Andrew Bagnell.
+\newblock Autonomy infused teleoperation with application to brain computer
+  interface controlled manipulation.
+\newblock {\em \textit{Autonomous Robots}}, pages 1--22, 2017.
+
+\bibitem{muller2006off}
+Urs Muller, Jan Ben, Eric Cosatto, Beat Flepp, and Yann~L Cun.
+\newblock Off-road obstacle avoidance through end-to-end learning.
+\newblock In {\em Advances in neural information processing systems}, pages
+  739--746, 2006.
+
+\bibitem{murphy2002dynamic}
+Kevin~Patrick Murphy and Stuart Russell.
+\newblock Dynamic bayesian networks: representation, inference and learning.
+\newblock 2002.
+
+\bibitem{mussaivaldi2000motor}
+Ferdinando~A MussaIvaldi and Emilio Bizzi.
+\newblock Motor learning through the combination of primitives.
+\newblock {\em Philosophical Transactions of the Royal Society of London.
+  Series B: Biological Sciences}, 2000.
+
+\bibitem{nikolaidis2012human}
+Stefanos Nikolaidis and Julie Shah.
+\newblock Human-robot teaming using shared mental models.
+\newblock {\em ACM/IEEE HRI}, 2012.
+
+\bibitem{pearl2009causality}
+Judea Pearl.
+\newblock {\em Causality}.
+\newblock Cambridge university press, 2009.
+
+\bibitem{pilarski2012dynamic}
+Patrick~M Pilarski, Michael~R Dawson, Thomas Degris, Jason~P Carey, and
+  Richard~S Sutton.
+\newblock Dynamic switching and real-time machine learning for improved human
+  control of assistive biomedical robots.
+\newblock In {\em \textit{Proceedings of the IEEE RAS \& EMBS International
+  Conference on Biomedical Robotics and Biomechatronics (BioRob) }}, pages
+  296--302. IEEE, 2012.
+
+\bibitem{ratliff2018riemannian}
+Nathan~D Ratliff, Jan Issac, and Daniel Kappler.
+\newblock Riemannian motion policies.
+\newblock {\em arXiv preprint arXiv:1801.02854}, 2018.
+
+\bibitem{schoner1995dynamics}
+Gregor Sch{\"o}ner, Michael Dose, and Christoph Engels.
+\newblock Dynamics of behavior: Theory and applications for autonomous robot
+  architectures.
+\newblock {\em \textit{Robotics and Autonomous Systems}}, 16(2-4):213--245,
+  1995.
+
+\bibitem{simpson2008tooth}
+Tyler Simpson, Colin Broughton, Michel~JA Gauthier, and Arthur Prochazka.
+\newblock Tooth-click control of a hands-free computer interface.
+\newblock {\em \textit{IEEE Transactions on Biomedical Engineering}},
+  55(8):2050--2056, 2008.
+
+\bibitem{storms2014blending}
+Justin~G Storms and Dawn~M Tilbury.
+\newblock Blending of human and obstacle avoidance control for a high speed
+  mobile robot.
+\newblock In {\em \textit{American Control Conference (ACC)}}, pages
+  3488--3493. IEEE, 2014.
+
+\bibitem{taha2011pomdp}
+Tarek Taha, Jaime~Valls Mir{\'o}, and Gamini Dissanayake.
+\newblock A pomdp framework for modelling human interaction with assistive
+  robots.
+\newblock In {\em \textit{Proceedings of the IEEE International Conference on
+  Robotics and Automation (ICRA)}}, pages 544--549. IEEE, 2011.
+
+\bibitem{tahboub2006intelligent}
+Karim~A Tahboub.
+\newblock Intelligent human-machine interaction based on dynamic bayesian
+  networks probabilistic intention recognition.
+\newblock {\em Journal of Intelligent and Robotic Systems}, 45(1):31--52, 2006.
+
+\bibitem{thomaz2011turn}
+Andrea~L Thomaz and Crystal Chao.
+\newblock Turn-taking based on information flow for fluent human-robot
+  interaction.
+\newblock {\em AI Magazine}, 32(4):53--63, 2011.
+
+\bibitem{tomasello2007shared}
+Michael Tomasello and Malinda Carpenter.
+\newblock Shared intentionality.
+\newblock {\em \textit{Developmental Science}}, 10(1):121--125, 2007.
+
+\bibitem{trautman2015assistive}
+Pete Trautman.
+\newblock Assistive planning in complex, dynamic environments: a probabilistic
+  approach.
+\newblock In {\em Systems, Man, and Cybernetics (SMC), 2015 IEEE International
+  Conference on}, pages 3072--3078. IEEE, 2015.
+
+\bibitem{uno1989formation}
+Yoji Uno, Mitsuo Kawato, and Rika Suzuki.
+\newblock Formation and control of optimal trajectory in human multijoint arm
+  movement.
+\newblock {\em Biological cybernetics}, 61(2):89--101, 1989.
+
+\bibitem{wang2013probabilistic}
+Zhikun Wang, Katharina M{\"u}lling, Marc~Peter Deisenroth, Heni Ben~Amor, David
+  Vogt, Bernhard Sch{\"o}lkopf, and Jan Peters.
+\newblock Probabilistic movement modeling for intention inference in
+  human--robot interaction.
+\newblock {\em \textit{The International Journal of Robotics Research}},
+  32(7):841--858, 2013.
+
+\bibitem{wasson2003user}
+Glenn Wasson, Pradip Sheth, Majd Alwan, Kevin Granata, Alexandre Ledoux, and
+  Cunjun Huang.
+\newblock User intent in a shared control framework for pedestrian mobility
+  aids.
+\newblock In {\em \textit{Proceedings of the IEEE/RSJ International Conference
+  on Intelligent Robots and Systems (IROS)}}, 2003.
+
+\bibitem{watkins1992q}
+Christopher~JCH Watkins and Peter Dayan.
+\newblock Q-learning.
+\newblock {\em Machine learning}, 8(3-4):279--292, 1992.
+
+\bibitem{ziebart2008maximum}
+Brian~D Ziebart, Andrew~L Maas, J~Andrew Bagnell, and Anind~K Dey.
+\newblock Maximum entropy inverse reinforcement learning.
+\newblock In {\em AAAI}, volume~8, pages 1433--1438. Chicago, IL, USA, 2008.
+
+\end{thebibliography}

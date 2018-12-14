@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: proposal.aux
+The style file: plain.bst
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 195 of file references.bib
+ :  
+ :  year={2016}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 202 of file references.bib
+ :  
+ :  year={2016}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Egli, Pascal Arturo, Gopinath, Deepak and Argall, Brenna" for entry egli2016call
+while executing---line 1049 of file plain.bst
+Warning--there's a number but no volume in abbink2018topology
+Too many commas in name 1 of "Egli, Pascal Arturo, Gopinath, Deepak and Argall, Brenna" for entry egli2016call
+while executing---line 1090 of file plain.bst
+Warning--empty year in egli2016call
+Warning--empty year in jainrobot
+Warning--empty journal in murphy2002dynamic
+You've used 67 entries,
+            2118 wiz_defined-function locations,
+            868 strings with 17411 characters,
+and the built_in function-call counts, 25059 in all, are:
+= -- 2461
+> -- 1285
+< -- 20
++ -- 511
+- -- 438
+* -- 1750
+:= -- 4079
+add.period$ -- 214
+call.type$ -- 67
+change.case$ -- 412
+chr.to.int$ -- 0
+cite$ -- 71
+duplicate$ -- 961
+empty$ -- 1908
+format.name$ -- 438
+if$ -- 5283
+int.to.chr$ -- 0
+int.to.str$ -- 67
+missing$ -- 71
+newline$ -- 337
+num.names$ -- 134
+pop$ -- 478
+preamble$ -- 1
+purify$ -- 350
+quote$ -- 0
+skip$ -- 685
+stack$ -- 0
+substring$ -- 1474
+swap$ -- 251
+text.length$ -- 20
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 258
+warning$ -- 4
+while$ -- 235
+width$ -- 69
+write$ -- 727
+(There were 4 error messages)
