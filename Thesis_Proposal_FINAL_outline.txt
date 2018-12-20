@@ -21,8 +21,23 @@ Mathematical models for Shared Autonomy
 	
 	Aspects of HRI (Soft aspects)
 	Existing Mathematical approaches for HRI
-	Causal Bayesian Network approach
-	Information Theoretic analysis. 
+
+
+Causal Bayesian Network approach
+
+	Things to clarify:
+		1. How do causal bayesian networks work in time? 
+		2. If we are just interested in information flow aspect of Bayesian nets, can we predefine conditional dependencies between variables. 
+		3. What times scales are appropriate!
+		4. MOST IMPORTANTLY, ARE INFORMATION MEASURES TRULY CAUSAL? - Read Kording's paper.
+		5. Is it important that we have a strict sense of causality? 
+		6. How are continuous valued variables dealt with? What limitations do discrete time Bayes Networks have. 
+
+	revisit Ay and Polani for 
+		1. Bayesian Networks for modeling single as well as coupled perception action loops. 
+			These authors autonmatically use causal BNs in time as PA loops evolve in time already. And they, by default assume, continuous valued varibles. Why are they not making a big deal about discrete vs continuous variables, like Bramley et al. 
+
+Information Theoretic analysis. 
 
 Learning
 

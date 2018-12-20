@@ -20,7 +20,7 @@ SHARED AUTONOMY:
 
 HRI in SHARED AUTONOMY:
 	Transparency
-	Multidimensional perspective
+	Multidimensional perspectivegit 
 	Shared MEntal models
 	Prior work: 
 	USer centric approach for Shared autonomy in assistive robotics. 
