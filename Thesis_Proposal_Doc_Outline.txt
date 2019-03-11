@@ -34,17 +34,21 @@ INFORMATION THEORY and INFORMATION FLOW?
 
 PROPOSED WORK:
 	Missing piece. HRI concepts are not properly quantified in literature. THis thesis hopes to bridge that gap. 
-	Shared Autonomy as a couple perception action loop -> Represent it as DBNs -> Use information theoretic measures to understand 'information flow' to quantify abstract quantities such as a transparency, cooperative behavior etc. 
+	Shared Autonomy as a couple perception action loop -> Represent it as DBNs -> Use information theoretic measures to understand 'information flow' 
+
+	USING INFO FLOW tE TYPE METRICS TO QUANTIFY TRANSPARENCY, COOPERATIVE BEHAVIOR ETC WOULD BE THE NOVEL CONTIRBUTION. THE GOAL IS TO BE ABLE TO TEST WHETHER THESE METRICS TRULY CAPTURE THE COOLOQUIAL NOTIONS OF TRANSPRAENCY COOPERATION, COORDINATION ETC. THAT IS, WHEN HUMAN DO INDEED FEEL THAT THE TRANSPARENCY IS HIGHER OR WHEN THE AUTONOMY IS ABLE TO COORDINATE WELL WITH WHAT THEY ARE DOING THEN HOW DOES THESE METRICS CHANGE? DO THEY TRULY REFLECT THESE 'FEELINGS'
+	to quantify abstract quantities such as a transparency, cooperative behavior etc. 
 
 	Need for a task agnostic, platform agnostic reward for use in the context of a RL framework. 
 		Notions of empowermnet?
 		Emergent cooperative behavior? 
+		Causal influence over the other agent?
 
 
 EXPERIMENTS:
 	1. Quantify
-		a. Small world
-		b. Big World
+		a. Small world - dummy software world
+		b. Big World - 
 	2. Control
 
 
@@ -77,11 +81,13 @@ Lack of generalizability is typically the issues? Would a generalizble reward fu
 Empowerment as a universal reward function. (improving an agents capability to exercise options on its environment and be able to sense/perceive the effects (that are shifted in time) of those actions quite well).
 
 Use similar notions to understand transparency in HRI in shared autonomy settings. 
-Maximizing transparency as an objective for the design of autonomy? Robot should act in such a way that bidirectional transparency is improved. We (as in the robot) don't have direct control over human. But having knowlegde of human (via some models) can let you design autonomy in such a way that a particular type of human action can be elicited. This is what Dorsa's work is about. But in my case the over arching goal would be to have robot autonomy such that it elcits human action such that the overall transparency as described by information theoretic measures gets maximized. 
+Maximizing transparency as an objective for the design of autonomy? Robot should act in such a way that bidirectional transparency is improved. WE (AS IN THE ROBOT) DON'T HAVE DIRECT CONTROL OVER HUMAN. BUT HAVING KNOWLEGDE OF HUMAN (VIA SOME MODELS) CAN LET YOU DESIGN AUTONOMY IN SUCH A WAY THAT A PARTICULAR TYPE OF HUMAN ACTION CAN BE ELICITED. THIS IS ESSENTIALLY THE IDEA OF CAUSAL INFLUENCE? THIS WAY THE ENTROPY OF THE ACTION DISTRIBUTION OF THE HUMAN IS LOW. CARE SHOULD BE TAKEN SUCH THAT SUCH ELICITATIONS DO NOT PERTURB THE USER EXPERIENCE MUCH.  This is what Dorsa's work is about. But in my case the over arching goal would be to have robot autonomy such that it elcits human action such that the overall transparency as described by information theoretic measures gets maximized. 
 
 EXPERIMENTS:
 
 1. 2D world. Characterization of Transparency. Correlation with subjective metrics. How to deal with noise in the subjective questionnaire data. 
+
+
 
 
 
@@ -466,3 +472,202 @@ What are some of the typically observed shortcomings?
 October 31:
 
 Motor control lietrature investigates how autonomy can help human regain and relaearn motor patterns. 
+
+
+
+
+IROS ideas:
+
+Agent A - autonomy
+Agent B - human
+
+
+1. AUTONOMY THAT IMPROVES EMPOWERMENT OF USERS. 
+
+
+In an assistive setting, the users' have lost their 'ability' to affect change on the environment. Their ability to 'do' stuff have been diminished. The goal of autonomy is to 'replenish' this ability or to augment the user's limited ability so that the combined human-machine system is able to effectively manipulate the environment towards desired states. That is joint 'empowerment' is higher than the human's empowerment alone. 
+
+What is ability? 
+Ability is the possession of having the skill to do something. Does it imply profiency? Not necessarily. SCI patients, due to brain of spinal cord injury, might have lost certain types of abilities - could be cognitive, physical etc. 
+
+The main purpose of introduction of autonomy to such scenarios is to 'fill the gaps' and help/augment the human. 
+
+The notion of empowerment, on the other hand, has been used to characterize an agent's ability to manipulate the environment and perceive the effect of the manipulation at a later time. Consider a scenario where an uninjured subject is able to control a robotic arm perfectly to accomplish a task. We are assuming that the person has sound knowledge about the robot dynamics (that is given the current robot state and particular action, s/he is able to predict the next state quite accurately) and also has great skill (which amounts to having a good inverse controller that is given a state and a next state, s/he is able to generate the action that will bring about the necessary state transition). In this case the user is empowermed to bring about change in the environment (that is, control the robot and manipulate objects) and can perceive the change. 
+
+A's action should be such that B's empowerment over the environment is high in the presence of A's action should be high. Think of agent A as a hidden force working under the hood magically improving agent B's empowerment. 
+
+2. SHARED AUTONOMY PARADIGM THAT INCENTIVIZES COOPERATIVE BEHAVIOR FROM THE HUMAN
+
+If human exhibits higher cooperative tendencies, then the autonomy is willing to help. If the human shows resistance or adversarial tendencies, it will stay out of the way. Having the human and autonomy work together will result higher collective reward (that is, in other words, joint effort improves task metrics, by default). If the human's goal is improve task metric, then it incentivizes the human to try to cooperate with the autonomy. This positive gesture from the human, could be supported by transparent actions by the autonomy, thereby establishing an effective bidirectional communication challenge. 
+
+Cosine similarity can be thought of as a poor man's version of cooperation. But cooperation is more than just producing control commands that are similar to the autonomy. Sometimes what the human needs to do is complementary to what the autonomy is doing. It still means that they are collaborating. If we go for metrics such as cosine similarity, then there is a chance that it becomes task specific. 
+
+Possible reasons why a person can have low empowerment? 
+
+1. They lack skill and knowledge about the system dynamics and therefore do not know how to affect change or predict how the action is going change the environment
+2. They don't have the right kind of interface to affect change (the effector or the medium)
+3. Due to some injury, an ability they once had no longer is present and therefore limits them from affecting desired change in the environment. 
+
+Learning a skill can be thought of acquiring the necessary tools to improve empowerment. That is, with skill, there is higher possibility of bringing about the desired change
+
+
+EFFECTIVE NETWORK STRUCTURE:
+
+Identifying factors that contribute the most how humans behave. If for example, the 'type' of intent inference 'does not' matter, effective connectivity measure might ignore that variable and therefore for an engineer it is useful to know that any choice of intent inference mechanism would be fine. Whereas a high connectivity was observed between the blending factor and human actions, we know that it is potentially and important place to intervene to affect change. This will be a correlational paper. Because that is what Kording's paper was all about. EC measures being a correlational claim as opposed to a causal claim. 
+
+EC techniques can be useful because we probably will not ever be able to write down the exact causal Bayesian net anyway. Therefore conditioning on all other variables to understand the causal influence of a specific source variable over another target variable would be highly unlikely. EC techniques can possibly narrow the possibilities to a tractable set and therefore make it amenable to analysis. 
+
+
+
+EC techniques work in brain science because the different brain regions have nonstop activity happening. The structure of neural connections give us some prior sense of 'connectivity' and therefore time lagged MI and TE type metrics are sensible to be used in that domain. The application of TE/MI type metrics can be used in shared autonomy kind of context as well, however their application can be severely limited by the type of task. 
+
+For example, continuous data streams are typically not the case, as HRI is usually an intermittent and discontinuous process. The human might interact, stop, contemplate, the autonomy might work in conjunction, might work in a turn taking paradigm. Informaiton theoretci analysis are typically non parametric and are performed directly using thr statistics of data. However, in tracking tasks for example, there is a ppotential for continuous generation of data. Also depends on the modality used to control the device. Some interfaces are inherently limited. 
+
+What could be a scenario where we can have two continuous valued signals under two different conditions. And in one condition the time lagged MI or TE or EC measure is more than the other. And by having so, we can possibly claim that the one condition improves the 'causal influence of one variable over the other' thereby showing a potential place to intervene. 
+
+List of variables and things that could be manipulated. 
+
+1. autonomy velocity: magnitude, type of policy (cartesian velocity, vs. joint space velocity). Regardless of the type, the magnitude could be altered as well. Timid (max vel is about 0.1m/s), aggressive (max vel is about 0.3-4m/s), the dimension along with the autonomy velocity is active. For a given alpha, changing magnitude still will have a impact on the perceived contribution of autonomy to task execution. 
+
+2. decision node which decides how to infuse autonomy with human control commands. The fusing function should take uh and ur as inputs as output u that would do something to the robot such that some cost function is minimized?; Type of fusion? blending vs. probabilistic, LSTMs, POMDP based. 
+
+uh maybe thought of as a solution of an unknown cost function that the human is trying optimize maybe suboptimally? 
+
+ur is autonomy's control command which it generates based on some notion of optimality? 
+
+what is a convex combination of such solutions mean?
+
+
+Experiment ideas:
+
+Have the human move towards the robot's intended goal. If the robot is transparent baout its intent then the human will be able to figure out which goal in a faster way and hopefully try to work with it. We will likely see a higher TE from autonomy velocity to human control commands, assuming that the human has sufficient experience to command the correct control commands to achieve a desired goal. 
+
+Possible scenario:
+
+human only controls the translation direction. 
+autonomy has full control over rotation. but in the translation dimensions various parameters will be altered that will affect the transparency. For example, increase in sparsity, randomization of direction so that the straight line velocities are no longer straight. 
+
+How to measure the TE from human to autonomy. Can this be used to establish that certain modes can communicate more about the human intent to the autonomy. There has to be reduction in entropy due to the information flow from the human to the autonomy. How autonomy uses the human control commands to updates its belief over human goals will have a direct impact on how the entropy reduction happens. If the autonomy ignore everything about the human control commands, then although we can possibly show TE from human to autonomy, it cannot be considered as useful information. That is, information might have been available for autonomy to make inference, but was probably never used in the proper way. 
+
+2. 
+The two conditions might be that a) autonomy is active in those dimensions that are not controlled by the human at any point in time b) autonomy is active in all dimensions, and as a result the autonomy's effect can interfere with the human's action thereby directly affecting what the human is trying to do. The human has knowledge of what mode/dimension s/he is operating in.
+
+
+Only have autonomy active in those dimensions that are not controlled by the human. That way the user does not lose control. 
+
+
+Brenna email:
+
+1. Worked on docker for MICO with Michael and Mahdieh. We need to figure out how to access the GUI and also the udev rules (this has been done before by other folks, so it is a matter of googling). We are planning to get it to this week. We also updated the READMEs as well as added an install dependencies script to the mico_base. Even without docker, now you are set to go. 
+
+2. Revisited the rejected RSS paper as we are considering it for IROS now. One of the reviewers had serious concerns about novelty and were not happy about the fact that all of it was in simulation. At times, it seemed like the reviewer was conflating goal disambiguation with goal inference. Although they are related, there is a distinction. 
+
+So maybe I can repitch it slightly differently to make things clear. For example, we can try to address how can mode selection enhance goal inference? Currently, we have a section for "The need for disambiguation". I think we can maybe rewrite it more mathematically in Bayesian terms, but explicitly conditioning the likelihoods on the current mode. In conjunction with the fact that only one mode is accessible at any time, we can maybe show that the existence of such a mode in a more rigorous manner. 
+
+3. For the second paper, I started looking at old data once again using one of the toolboxes. The second toolbox that I wanted to use, I have been having installation issues and I have been seeking help directly with the developers via github. We need to be able to setup experiemnt scenarios in which we can focus on two continuous valued variables such that one of them has some sort of causal influence on the other. If we can alter some independent condition in such a way that it affects the causal influence, and by interpreting the causal influence as a favorable or an unfavorable thing (depending on the situation) we can possibly talk about potential variables that can be intevened or focussed on while designing autonomy. 
+
+4. Guy and I have been working on the TRI paper as well. 
+
+Also, here are the paper timelines:
+
+IROS paper 1 (RSS reject):
+Won't be having a reading buddy for this as this is a rehash of the old paper. 
+I plan to submit the paper early Feb (around Feb 5-6) itself, so that I can focus on the other IROS paper exclusively.
+1. Reworked draft to you on Jan 24, incorporating suggestions from reviewers, clarifying the motivation etc. 
+2. Final draft to Brenna on Feb 2. 
+3. Submit on Feb 6
+
+IROS paper 2:
+Michael will be my reading buddy
+
+1. Draft 1 to Brenna - Feb 15th
+2. Draft 2 to Michael - Feb 21
+3. Draft 3 to Brenna -  Feb 25
+4. Draft 4 (Final grammar pass) to Michael - Feb 27
+
+
+
+For IROS paper 1:
+
+How can mode switches be used to enhance the intent inference capability of autonomy? 
+
+Maybe cast the problem in Bayesian terms? 
+
+p(uh | g, m) is different for different modes. We don't talk about it properly
+p(g | uh) = sum(p(m)*p(g | uh , m))
+
+Give the trajectory up until the current game followed by a mode switch by the user (true intended mode switch), can the prediction of goal be done in a better manner subsequently. 
+
+
+
+
+Hyperparameters to played aorund with?
+
+projection_time (how much into the future should the model be projected?)
+delta_t, (coarseness of simulation)
+mod_comp_timestep (how often should the mode computation between triggered)
+tau (how sluggish or responsive should dft be)
+std for kinematics - presently 0. 
+
+
+changes:
+
+1. longer projection time 4s into the future. 
+2. less often mode switches. 
+3. The set of control commands used for projection correspond to the control commands that the human would have used to move towards each of the N goals. The projection of probabilities, utilize a human model. Human model is based of von Mises Fisher distribution. 
+
+
+
+
+IROS Paper 2:
+
+Narrative outline:
+
+Introduction outline. 
+
+Seamless HRi can benefit transparency. Transparency can relate to a bunch of different things: iintent i clear, communication is better, motion is legible etc. Transparency review paper. proper quantification of transparency can shed light on the intrinsic dynamics of HRI and can help in the design of shared autonomy systems that can optimize for such amorphous notions of what is good in HRI. In this paper we utilize mathematical tools from areas such as Bayesian Networks, and information theory to model HRI in a mathematically rigorous manner and quantify notions such as transparency using infomration theoretic measrues. We present a pilot study in which we quantify the transparency of the robot's intent to the human utilizing a predictive information metric based on multivariate transfer entropy. Our study revelaed this nonparameteric information theoretic metrics can be used to quantify the transparency level directly from time-series data that can be measure quite easily using 
+Quantifying transparency using TE methods in HRI. 
+off-the-shelf sensors. We also show correlation between the information theoretic measures and subjective evlautaion of transparency. 
+
+Inroduction:
+
+What makes HRI good. 
+Transparency is critical. What is transparency and what are the different notions of transparency. Connect it to communication of intent, legibility, clear communication, Utilize notions from psychology humn-humna interaction etc. 
+proper quantiifcation of transparency directly from data is still eluding literarture. With rely on the notion that with increased transparency the behavior of each agent conditioned on the other agent's actions become more predictable. Elaborate on it. 
+Modeling HRI as a perception action loop. Utilize the DBN frameowkr to do the same. Information flow between the nodes in the DBN has been studied indpendently. We bring this notion into the domain of HRI and in this paper claim that transparency bewteen the agents can be quantified by computing infomration flow between relevant variables of autonpmy and human
+
+Information thoery minor primer. Lift from previous draft. 
+
+The contributions of this paper are three fold:
+1. Framing HRI as perception action loop unrolled in time, yutilizing CBNs
+2. Quantification of yje mptopm pf yrasparency utilizing infomration flow based metrics that rely on conditional mutual information 
+3. Validation experiment in which the above mentioned metric is utilized to chatracerize autonomy to human transpoarency. 
+4. Results indicate that the metric is caoable of cpaturing colloquial notions of transparency successful. Demonstrations high correlation between subjective evaluation as well. 
+
+h
+Transparency is critical for success of HRI. Different notions of transparency as expounded in literature. Transparency can lead to increased collaboration, better communication of (intent, desires and goals) thereby helping with theory of mind aspects of interaction for both agents. How can we quantify transparency. Information theoretic tools provide nonparametric metrics to evaluate how the prediticability of one variables improves as a result of trhe knowledge of another variable. 
+
+The HRI interaction can be captured using a simple Bayesian net. In this particular task, Can be thought of a perception action loop unrolled over time. Form the persepctive of each agent, there are observable variables as well as latent variables (that typically need to inferred from the observation). Moreover information flow between the nodes of the network can be quantified using conditional mutual information type ideas. 
+Motion contains information regarding intent and goals (References). By perturbing different aspects of motion (such as continuity, direction, amplitude) etc we can exogenously affect the amount of information that gets transmitted via motion
+
+Possible experiment setup:
+
+Varaible that can affect 'transparency': Direction, Dropout, Amplitude. 
+	possibly can do away with amplitude. So two variables. amenable for 2 way anova. ? Discrete levels for each variable. 
+	Direction : Add Gaussian noise to the direction. zero mean. 4 different levels of standard deviation? 
+	Dropout: 4 different levels of dropout rate. maybe 0.0, 0.2, 0.6, 0.8
+
+	2 possible scenarios to test? 
+	A simpler one? 
+
+	How should u be structured. 
+
+	u_rot = u^r_rot
+	u_trans = 
+
+	Training period: 
+	Just getting them to become familiar with robot teleop
+
+	Measurements:
+	Time to task completion? Better transparency --> Might result in faster trials
+	Time at which users commit to a goal. 

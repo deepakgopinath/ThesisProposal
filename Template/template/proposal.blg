@@ -13,6 +13,8 @@ I was expecting a `,' or a `}'---line 202 of file references.bib
  :  year={2016}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "silverman1986density"
+Warning--I didn't find a database entry for "kraskov2004estimating"
 Too many commas in name 1 of "Egli, Pascal Arturo, Gopinath, Deepak and Argall, Brenna" for entry egli2016call
 while executing---line 1049 of file plain.bst
 Warning--there's a number but no volume in abbink2018topology
@@ -23,7 +25,7 @@ Warning--empty year in jainrobot
 Warning--empty journal in murphy2002dynamic
 You've used 67 entries,
             2118 wiz_defined-function locations,
-            868 strings with 17411 characters,
+            870 strings with 17452 characters,
 and the built_in function-call counts, 25059 in all, are:
 = -- 2461
 > -- 1285

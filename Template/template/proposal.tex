@@ -50,7 +50,7 @@
 \textheight     9.0in
 \textwidth      6.5in
 
-\title{{\bf Towards an Information Theoretic Analysis of Human-Robot Interaction in Shared Autonomy} \\
+\title{{\bf Towards an Information Theoretic Analysis of Human-Autonomy Interaction in Shared Autonomy} \\
 \it Thesis proposal}
 \author{ {\bf Deepak Edakkattil Gopinath}  \\
 Department of Mechanical Engineering \\
@@ -66,7 +66,7 @@ Northwestern University\\
 
 \pagebreak
 \begin{abstract}
-Human-Robot Interaction (HRI) in the context of shared autonomy is a rich and complex phenomena. The effectiveness and usefulness of shared-control human-machine systems critically depends on the fluency and efficacy of human-robot interaction. Efficient HRI can lead to an improvement in joint task performance with higher user satisfaction and enhanced trust, all of which are desired characteristics of a joint human-machine system. From an engineer/system designer's perspective, in order to achieve optimal performance the design of autonomy should adequately taken into account the richness, subtleties and complexity of the interaction between the human and the machine.
+Human-Robot Interaction (HRI) in the context of shared autonomy is a rich and complex phenomenon. The effectiveness and usefulness of shared-control human-machine systems critically depends on the fluency and efficacy of human-robot interaction. Efficient HRI can lead to an improvement in joint task performance with higher user satisfaction and enhanced trust, all of which are desired characteristics of a joint human-machine system. From an engineer/system designer's perspective, in order to achieve optimal performance the design of autonomy should adequately taken into account the richness, subtleties and complexity of the interaction between the human and the machine.
 
 In this thesis proposal, I plan to propose a mathematical framework for human-robot interaction in the context of shared autonomy that utilizes ideas from probabilistic graphical models and information theory. More specifically, the interaction between human and autonomy will be modeled as coupled perception-action loops unfolding in time using \textit{causal Bayesian Networks}. Within this framework of causal Bayesian Networks, design of autonomy can be thought of as appropriately timed \textit{interventions} at specific parts of model, with an intention to alter the bi-directional information flow between the human and machine. Using the proposed mathematical model, I will research three important problems that arise in HRI namely, a) \textbf{learning} b) \textbf{inference} and c) \textbf{joint task performance}. More specifically, I will focus on the information theoretic analysis of how each of the above mentioned phenomena unfolds during task execution. The eventual goal is to utilize the proposed mathematical framework to inform the design of autonomy that will help \textit{facilitate human learning}, \textit{improve inference accuracy} and \textit{enhance task performance}.
 \end{abstract}
@@ -96,7 +96,7 @@ The standard usage of these assistive machines, however, still relies on manual 
 In such cases, \textit{robot autonomy}, the ability of robots to accomplish a task independently without requiring explicit instructions from a human, holds considerable promise as a tool to offset (and in some cases restore) the above-mentioned limitations. Advances in the fields of machine learning and artificial intelligence have helped to endow these assistive machines with better decision making and prediction capabilities while interacting with humans in real-world scenarios~\cite{huang2015using}.
 However, in literature there is a growing consensus that users of assistive technologies \textit{do not} prefer to cede full control authority to the robotic partner during task execution~\cite{gopinath2017human}. In such cases, the introduction of \textit{shared autonomy} seeks to find a middle ground between full teleoperation and autonomy by offloading only some aspects of task execution to the autonomy~\cite{wasson2003user, demeester2008user}. 
 
-In a shared autonomy system, the task responsibility is split between the user and autonomy with the aim of reducing human effort in accomplishing a task. HRI	 in the context of shared autonomy is a rich and complex phenomena. The effectiveness and usefulness of shared-control human-machine systems critically depends on the quality and efficiency of human-robot interaction. That is, for robots and humans to work side-by-side and achieve joint goals and accomplish various tasks in a coordinated and cooperative manner, it is imperative that both parties understand each other, communicate and infer internal desires and intentions efficiently~\cite{hoc2001towards}. From an engineering perspective, design of appropriate kinds of autonomous behaviors for a shared-control system, therefore, needs to take into account the dynamics of human-robot interaction during the course of task execution~\cite{hoffman2007cost}. 
+In a shared autonomy system, the task responsibility is split between the user and autonomy with the aim of reducing human effort in accomplishing a task. Human-Robot Interation (HRI) in the context of shared autonomy is a rich and complex phenomena. The effectiveness and usefulness of shared-control human-machine systems critically depends on the quality and efficiency of human-robot interaction. That is, for robots and humans to work side-by-side and achieve joint goals and accomplish various tasks in a \textit{coordinated} and \textit{cooperative} manner, it is imperative that both parties understand each other, communicate and infer internal desires and intentions efficiently~\cite{hoc2001towards}. From an engineering perspective, design of appropriate kinds of autonomous behaviors for a shared-control system, therefore, needs to take into account the dynamics of human-robot interaction during the course of task execution~\cite{hoffman2007cost}. 
 
 Current research approaches for design of shared autonomy systems rely on various kinds of mathematical models to solve different aspects of HRI as independent subproblems and therefore suffer from generalization across tasks, robotic platforms and user types. For my thesis, I am motivated by the desire to develop a \textit{unified} mathematical framework to analyze different aspects of HRI under a single umbrella in an attempt to shed light on the more \textit{fundamental} and \textit{low-level} characteristics of human-robot teaming.
 
@@ -223,20 +223,94 @@ with an emphasis on information theoretic analysis of interactions between the n
 %User-centric system development. 
 
 \pagebreak
-\section{Proposed Modeling Framework for HRI in Shared Autonomy}
-In this chapter, I present the Causal Bayesian Network (CBNs) based mathematical model for information theoretic analysis of human-robot interaction in shared autonomy. The dynamical exchange between the human and the autonomous partner is modeled as a coupled perception action loop. The nodes in the CBN represent the various variables (both latent and observed) that are relevant for analysis and the edges represent the probabilistic influence they have on each other. Within this framework, autonomy is thought of as appropriately timed exogenous interventions that can alter the information flow between the different nodes in the network.
+\section{Proposed Modeling Framework for HAI in Shared Autonomy}
+In this chapter, I introduce our model for HAI for information theoretic analysis represented as a Causal Bayesian Network (CBN). The dynamical exchange between the human and the autonomous partner is modeled as a coupled perception-action loop. The nodes in the CBN represent the various variables (both latent and observed) that are relevant for HAI and the edges represent the probabilistic influence they have on each other []. Within this framework, autonomy is thought of as appropriately timed exogenous interventions that can alter the information flow between the different nodes in the network.
 
 \subsection{Causal Bayesian Networks for HRI}
 
-Establish how the idea of perception action loop can be used to describe the interaction between an agent and its environment. Emphasize the generality of this approach and how it is applicable to biological as well as artificial agents. When there are multiple agents involved, from one agent's perspective the other agent is part of its environment and vice versa. 
+In order to motivate how the notion of perception-action loops can be used to describe the interaction between human and autonomy in a shared autonomy setting, we use a concrete example.
 
-For example, consider a scenario in which a human and an autonomous partner is jointly controlling a robotic arm to perform table top manipulation. Assume that the person is seated next to the robotic arm and is able to observe various aspects of the environment such as the positions and orientations of the various objects, the end-effector pose of the robot, the shape and colors of the objects (although the latter property might not be relevant for reaching or manipulation tasks). It is likely that their line of sight is also obstructed due to occlusion from the robot or other factors and therefore, through their senses the human is able to receive only partial information regarding the true state of the environment. A teleoperation interface such as a joystick can be used by the human to control the robot. The policy that the human implements to control the robot might depend on a vareity of factors such as the partial observation they have of the environment, internal goals and desires, type of control interface used, so on and so forth. Upon taking an action, the environment state evolves due to the inherent dynamics and the process repeats. 
+%Establish how the idea of perception action loop can be used to describe the interaction between an agent and its environment. Emphasize the generality of this approach and how it is applicable to biological as well as artificial agents. When there are multiple agents involved, from one agent's perspective the other agent is part of its environment and vice versa. 
+Consider a scenario in which a motor-impaired human and an autonomous partner jointly control an assistive robotic arm to perform table-top manipulation. For simplicity, we assume that shared control is achieved via a control blending paradigm in which the human's control command and the autonomy's control command are arbitrated in some fashion to produce a final control command that is issued to the robot controllers. We assume that the assistive robotic arm is mounted on a wheelchair in which the person is seated. From the seated position, the person is able to observe various aspects of the environment such as the positions and orientations of the various table-top objects, the shape and color of the objects, the pose of the robot's end-effector \textit{et cetera}. It is likely that their line of sight is obstructed due to occlusion from the robot and other factors and as a result, the human is only able to receive partial information regarding the true state of the environment. Typical robot teleoperation is enacted through a control interface such as a joystick, switch-based headarray or a sip-n-puff tube. How the human chooses to act (control the robot) may depend on a variety of factors such as the partial observations of the environment, internal goals and desires, task specifications, constraints of the control interface and so on and so forth. Upon taking an action the environment state evolves due to the inherent stochastic dynamics and the process repeats in time. In essence, the interaction between the human and the environment can be thought of as a perception-action loop unfolding in time. 
 
-Similarly, from the autonomy's perspective, 
+On the other hand, if we focus on how autonomy interacts with the robot, the autonomy receives partial information about the robot state through various types of sensors (joint encoders, RGBD cameras) and takes actions to control the robot using available information. This interaction between autonomy and environment can also be thought of a perception-action loop.
+
+In shared autonomy, the human and autonomy interacts with the environment concurrently to accomplish tasks jointly. In addition to interacting with the environment, the human and autonomy interact with each other via explicit and implicit exchange of information. Both agents continually infer one another's latent states and actions (for example, in situations where the human goal is not explicitly specified, the autonomy has to infer the human's internal goal from sensor data. Similarly, the human might not be fully aware of \textit{how} the autonomy tries to assist the human in the task, in which case, the human needs to infer the autonomy's decision-making logic to effectively cooperate and coordinate with the autonomy). This joint interaction can be captured by coupling the independent perception-action loops into one. 
+
+Causal Bayesian Networks (CBS) provide a systematic mathematical framework to model this coupled perception-action loop that unfolds in time. In a CBN, the nodes represent the variables of interest for the quantification of HAI and the edges represent the statistical dependence between the nodes. 
+%
+%Is higher transparency from A to B related to a) A having a causal influence on B's actions b) improving B's ability to predict A's next actions? I think the latter is more efficient. If B can predict A better, this amounts to have a more accurate model for how A will behave. The entropy of A's next action distribution will be lower given more transparent previous actions by A. 
+%
+%Can information theoretic ideas be used to characterize states of the joint system in which cognitive load on the user and `energy consumed' for various phenomena such as inference (of human goals, deciding on policy)
+%
 \subsection{Primer on Information Theory}
+In this subsection we describe some of the fundamental information theoretic quantities that are essential for the quantification of information flow between nodes of a CBN. 
+\subsubsection{Entropy and Mutual Information}
+The most fundamental quantity in information theory is \textit{entropy}. For a discrete random variable $X$ the entropy, $H(X)$ is given by
+\begin{equation*}
+H(X) = -\sum_{x \in \Omega}^{} p(x)\text{log}_{2}~p(x)
+\end{equation*}
+where $p(x)$ is the probability mass distribution and the summation extends over all possible states the random variable can assume. Entropy can be interpreted as the average uncertainty in the value of a sample of a variable. 
+The above definition of entropy for a single random variable can be extended to two variables in a natural way. For random variables $X$ and $Y$ the \textit{joint} entropy is defined as 
+\begin{equation*}
+H(X, Y) = -\sum_{x \in \Omega_x}^{}\sum_{y \in \Omega_y}^{}p(x,y)\text{log}_2~p(x,y)
+\end{equation*}
+where $p(x,y)$ is the joint probability distribution and the summation is over all possible values that $(x,y)$ can acquire. This definition can be extended in a similar fashion to an arbitrary number of variables. 
+
+Closely related is also the idea of \textit{conditional} entropy, which is the entropy of a random variable after we have taken into account some context. The conditional entropy of random variable $X$ given $Y$ is defined as 
+\begin{equation*}
+H(X|Y) = -\sum_{x \in \Omega_x}^{}\sum_{y \in \Omega_y}^{}p(x, y)\text{log}_2~p(x|y)
+\end{equation*}
+
+Yet another important information theoretic quantity of interest is \textit{mutual information}. Mutual information is the amount of information \textit{shared} between two random variables $X$ and $Y$ and can be interpreted as the statistical dependence between them. The mutual information $I(X;Y)$ is defined as 
+\begin{align*}
+I(X;Y) &= \sum_{x \in \Omega_x}^{}\sum_{y \in \Omega_y}^{}p(x,y)\text{log}_2\frac{p(x,y)}{p(x)p(y)} \\
+&=  H(X) - H(X|Y) = H(Y) - H(Y|X)
+\end{align*}
+and can be interpreted as the KL divergence of the product of the marginal distributions from the joint distribution. Furthermore, mutual information is symmetric in its arguments. 
+
+Not surprisingly, the \textit{conditional mutual information}, an information measure crucial for the computation of transfer entropy, is the shared information between two random variables $X$ and $Y$ in the context of a third random variable $Z$. It is given by
+\begin{align*}
+I(X;Y | Z) &= \sum_{x \in \Omega_x}^{}\sum_{y \in \Omega_y}^{}\sum_{z \in \Omega_z}^{}p(x,y,z)\text{log}_2\frac{p(x,y,z)p(z)}{p(x,z)p(y,z)} \\
+&= \sum_{x \in \Omega_x}^{}\sum_{y \in \Omega_y}^{}\sum_{z \in \Omega_z}^{}p(x,y,z)\text{log}_2\frac{p(x|y,z)}{p(x|z)}\\
+&= H(X|Z) - H(X|Y,Z).
+\end{align*}
+\subsubsection{Transfer Entropy}
+All the above mentioned measures deal with static random variables. If we want to investigate dynamics of random time-series processes, transition probabilities need to be considered. Let $X$ be a random time-series processes of random variables $\{\dots, X_{n-1}, X_n, X_{n+1}, \dots\}$ with process realizations denoted by $\{\dots, x_{n-1}, x_n, x_{n+1}, \dots\}$, where $n$ denotes the discrete countable time index. Let $\boldsymbol{X}_n^{(k)} = \{X_{n-k+1},\dots,X_{n-1}, X_n\}$ denote the $k$ consecutive variables of $X$ which has realizations $\boldsymbol{x}_n^{(k)} = \{x_{n-k+1},\dots,x_{n-1}, x_n\}$\footnote{$\boldsymbol{x}_n^{(k)}$ are the Takens' \textit{embedding vectors} whose \textit{embedding} dimension is $k$ and represents the \textit{state} of the $k^{th}$ order Markov process. This is due to the Taken's delay embedding theorem which allows for the reconstruction of the underlying state representation of a dynamical system from the time series data.}. 
+
+Now let us consider another random time-series process of random variables denoted by $Y$. We shall refer to $Y$ as the source process and $X$ as the target process. Transfer entropy captures the notion of information transfer between $Y$ and $X$, as the amount of information that the source process provides about $X_{n+1}$ (the target's next state) after considering the target's past states. Therefore, transfer entropy is a directional measure and is asymmetric with respect to the two random processes $X$ and $Y$. The transfer entropy is defined as 
+\begin{equation*}
+TE_{Y \rightarrow X}(k,l) = \sum_{}^{}p(x_{n+1}, \boldsymbol{x}_n^{(k)}, \boldsymbol{y}_n^{(l)})\text{log}~\frac{p(x_{n+1} | \boldsymbol{x}_n^{(k)}, \boldsymbol{y}_n^{(l)})}{p(x_{n+1}|\boldsymbol{x}_n^{(k)})}
+\end{equation*}
+where $k$ and $l$ are the embedding dimensions of the target and the source respectively and the summations is over all possible joint configurations for $x_{n+1}, \boldsymbol{x}_n^{(k)}$ and $\boldsymbol{y}_n^{(l)}$. 
+Transfer entropy can be expressed in terms of conditional mutual information between the variables as
+\begin{equation*}
+TE_{Y \rightarrow X}(k,l) = I(X_{n+1}; \boldsymbol{Y}_n^{(l)}|\boldsymbol{X}_n^{(k)}).
+\end{equation*}
+
+This particular mathematical form of transfer entropy is important for computational purposes. As is obvious from the equations above transfer entropy values depend on the embedding dimensions. Embedding dimensions are selected to ensure that active information storage (information contained in the past states of the target) is eliminated properly and is not counted in the transfer entropy computation. 
+
+\subsubsection{Estimation from Data}
+
+Although the mathematical expressions for all the information theoretic measures discussed so far in this paper are relatively straightforward and interpretable there are various issues that arise in practice. First of all, the probability densities contained in each of the measures need to be empirically estimated from a finite number of data samples obtained from the time-series of the random process of interest. Any such estimator is prone to bias and variance due to the limited number of samples available. This problem is exacerbated for continuous valued random variables.
+
+One approach to estimate the relevant probability densities is to use \textit{kernel estimators}~\cite{silverman1986density}. The joint probability densities are estimated using a \textit{kernel function} denoted by $\Theta$ which measures the `closeness' of pairs of samples. For example, we can estimate the joint density of two variables as 
+\begin{equation*}
+\hat{p}_r(x_n, y_n) = \frac{1}{N}\sum_{n^{\prime} = 1}^{N}\Theta\Bigg(\norm{\begin{bmatrix}
+	x_n - x_{n^{\prime}} \\
+	y_n - y_{n^{\prime}}
+	\end{bmatrix}}-r\Bigg)
+\end{equation*}  
+where $N$ is the total number of samples, $r$ is the kernel width and $\Theta$ is a step kernel such that $\Theta(x > 0) = 0$ and $\Theta(x \leq 0) = 1$ and $\norm{\cdot}$ is the maximum distance. Kernel estimators are model-free and therefore can be utilized to measure nonlinear relationships. 
+
+An improvement upon the kernel-based estimation approach for mutual information was proposed by Kraskov et. al~\cite{kraskov2004estimating}. Their approach combines various techniques that are designed to reduce the bias and variance errors that can occur due to small sample sizes. This approach relies on a nearest-neighbors approach which is effectively equivalent to dynamically changing the kernel width to the density of the samples. 
 
 \pagebreak
 \section{Proposed Studies}
+\subsection{Quantifying Transparency}
+Systematic manipulation of two factors that can direct affect the transparency of autonomy's intent when controlling the robot, namely, signal sparsity and directional perturbation. Signal sparisty can be controlled using a dropout factor. Directional perturbation is amount by which the straight line path is perturbed. 
+
+Could also test, Joint angle vs. Cartesian representation. 
 \subsection{Inference}
 
 \subsection{Learning}

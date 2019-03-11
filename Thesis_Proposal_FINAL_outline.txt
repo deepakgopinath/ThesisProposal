@@ -27,26 +27,34 @@ Causal Bayesian Network approach
 
 	Things to clarify:
 		1. How do causal bayesian networks work in time? 
-		2. If we are just interested in information flow aspect of Bayesian nets, can we predefine conditional dependencies between variables. 
-		3. What times scales are appropriate!
+		2. If we are only interested in information flow aspect of Bayesian nets, can we predefine conditional dependencies between variables or do we have to learn these factors (conditional depoendency ) tables from data? 
+		3. What times scales can be appropriately modeles using CBNs?
 		4. MOST IMPORTANTLY, ARE INFORMATION MEASURES TRULY CAUSAL? - Read Kording's paper.
+			How important is the causal interpretation. 
 		5. Is it important that we have a strict sense of causality? 
 		6. How are continuous valued variables dealt with? What limitations do discrete time Bayes Networks have. 
+			Check out Neil Bramley's work for arguments against continuous. Is it a computational reason. 
 
 	revisit Ay and Polani for 
 		1. Bayesian Networks for modeling single as well as coupled perception action loops. 
 			These authors autonmatically use causal BNs in time as PA loops evolve in time already. And they, by default assume, continuous valued varibles. Why are they not making a big deal about discrete vs continuous variables, like Bramley et al. 
 
+NOTES:
+What does increased transparency from A to B mean? What does this enable B to do? 
+	1) With increased transparency from A to B, B might have acquire better predictive capbilities of A's actions and intentions? 
+
+	
+
 Information Theoretic analysis. 
+Introduce the core ideas of entropy, MI, transfer entropy, information flow. 
+Discuss information flow vs. transfer entropy and how they have been used as measure of causal influence. 
+
+What doesn't exist in literature is the equivalence of 
 
 Learning
 
 Inference
 
 Task Performance
-
-
-
-
 
 
