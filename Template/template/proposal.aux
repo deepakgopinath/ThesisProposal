@@ -19,19 +19,21 @@
 \citation{cover2012elements}
 \citation{pearl2009causality}
 \citation{ay2008information}
+\citation{schreiber2000measuring}
+\citation{javdani2015shared}
+\citation{kim2012autonomy}
+\citation{gopinath2017human}
+\citation{kiesler2005fostering}
 \citation{ikemoto2012physical}
 \citation{mussaivaldi2000motor}
-\citation{wang2013probabilistic}
-\citation{kelley2008understanding}
-\citation{gopinath2017human}
 \citation{abbink2018topology}
 \citation{hiatt2017human}
 \citation{javdani2015shared}
 \citation{hiatt2017human}
 \citation{marr1982vision}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Human-Robot Interaction in Shared Autonomy}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Human-Autonomy Interaction in Shared Control}{4}}
 \newlabel{sec:HRI_SA}{{2}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Mathematical Models for Shared Autonomy}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Mathematical Models for Shared-Control}{4}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Models for Human Behavior}{4}}
 \citation{dragan2013policy}
 \citation{uno1989formation}
@@ -82,7 +84,7 @@
 \citation{tomasello2007shared}
 \citation{bratman1992shared}
 \citation{clark1996using}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Desired Characteristics of HRI (Could have a better subsection title)}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Desired Characteristics of HAI (Could have a better subsection title)}{8}}
 \citation{kiesler2005fostering}
 \citation{klien2004ten}
 \citation{lyons2014transparency}
@@ -91,14 +93,35 @@
 \citation{nikolaidis2012human}
 \citation{egli2016call}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Summary}{10}}
+\citation{cutsuridis2013cognitive}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Modeling Framework for HAI in Shared Autonomy}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Causal Bayesian Networks for HRI}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Primer on Information Theory}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Entropy and Mutual Information}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Transfer Entropy}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Causal Bayesian Networks for HAI}{11}}
+\citation{pearl2009causality}
+\citation{schreiber2000measuring}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Our model of Human-Autonomy Interaction as a coupled perception-action loop that unfolds in time represented as a Causal Bayesian Network. The nodes represent various relevant variables that interact with each other at discrete time steps. $\textbf  {w}_t$ refers to the robot state. $\textbf  {s}^h$ and $\textbf  {s}^a$ denote the internal state of the human and autonomy respectively. $\textbf  {o}^h$ and $\textbf  {o}^a$ refer to the noisy observations of the true robot state that are accessible to the human and autonomy respectively. $\textbf  {a}_h$ represents the action taken by the human and $\textbf  {u}_h$ denotes the human control command as filtered through a control interface such as a joystick. $\textbf  {u}_a$ represents the autonomy's control command. The evolution of robot state is governed by the stochastic dynamics of the environment.}}{12}}
+\newlabel{fig:cbn}{{1}{12}}
+\citation{ay2008information}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Primer on Information Theory}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Entropy and Mutual Information}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Transfer Entropy}{14}}
 \citation{silverman1986density}
 \citation{kraskov2004estimating}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Estimation from Data}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Estimation from Data}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Proposed Studies}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Information Theoretic Quantification of Transparency}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Introduction}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Approach}{16}}
+\newlabel{eq:transp}{{1}{16}}
+\citation{kiesler2005fostering}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Experimental Design}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Optimizing Task Performance}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Introduction}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Approach}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Experiment Design}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Guided Active Learning in Humans}{19}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Introduction}{19}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Approach}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Experiment Design}{20}}
 \bibstyle{plain}
 \bibdata{references}
 \bibcite{abbink2018topology}{1}
@@ -115,11 +138,6 @@
 \bibcite{demeester2008user}{12}
 \bibcite{dragan2013legibility}{13}
 \bibcite{dragan2012formalizing}{14}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Proposed Studies}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Quantifying Transparency}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Inference}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Learning}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Task Performance}{15}}
 \bibcite{dragan2013policy}{15}
 \bibcite{dvijotham2010inverse}{16}
 \bibcite{egli2016call}{17}
@@ -143,33 +161,34 @@
 \bibcite{kelley2008understanding}{35}
 \bibcite{khatib1986real}{36}
 \bibcite{kiesler2005fostering}{37}
-\bibcite{kirk1970optimal}{38}
-\bibcite{klien2004ten}{39}
-\bibcite{koller2009probabilistic}{40}
-\bibcite{kuffner2000rrt}{41}
-\bibcite{laplante1992assistive}{42}
-\bibcite{lyons2014transparency}{43}
-\bibcite{mainprice2016warping}{44}
-\bibcite{marr1982vision}{45}
-\bibcite{mataric2007socially}{46}
-\bibcite{muelling2017autonomy}{47}
-\bibcite{muller2006off}{48}
-\bibcite{murphy2002dynamic}{49}
-\bibcite{mussaivaldi2000motor}{50}
-\bibcite{nikolaidis2012human}{51}
-\bibcite{pearl2009causality}{52}
-\bibcite{pilarski2012dynamic}{53}
-\bibcite{ratliff2018riemannian}{54}
-\bibcite{schoner1995dynamics}{55}
-\bibcite{simpson2008tooth}{56}
-\bibcite{storms2014blending}{57}
-\bibcite{taha2011pomdp}{58}
-\bibcite{tahboub2006intelligent}{59}
-\bibcite{thomaz2011turn}{60}
-\bibcite{tomasello2007shared}{61}
-\bibcite{trautman2015assistive}{62}
-\bibcite{uno1989formation}{63}
-\bibcite{wang2013probabilistic}{64}
-\bibcite{wasson2003user}{65}
-\bibcite{watkins1992q}{66}
-\bibcite{ziebart2008maximum}{67}
+\bibcite{kim2012autonomy}{38}
+\bibcite{kirk1970optimal}{39}
+\bibcite{klien2004ten}{40}
+\bibcite{koller2009probabilistic}{41}
+\bibcite{kuffner2000rrt}{42}
+\bibcite{laplante1992assistive}{43}
+\bibcite{lyons2014transparency}{44}
+\bibcite{mainprice2016warping}{45}
+\bibcite{marr1982vision}{46}
+\bibcite{mataric2007socially}{47}
+\bibcite{muelling2017autonomy}{48}
+\bibcite{muller2006off}{49}
+\bibcite{murphy2002dynamic}{50}
+\bibcite{mussaivaldi2000motor}{51}
+\bibcite{nikolaidis2012human}{52}
+\bibcite{pearl2009causality}{53}
+\bibcite{pilarski2012dynamic}{54}
+\bibcite{ratliff2018riemannian}{55}
+\bibcite{schoner1995dynamics}{56}
+\bibcite{schreiber2000measuring}{57}
+\bibcite{simpson2008tooth}{58}
+\bibcite{storms2014blending}{59}
+\bibcite{taha2011pomdp}{60}
+\bibcite{tahboub2006intelligent}{61}
+\bibcite{thomaz2011turn}{62}
+\bibcite{tomasello2007shared}{63}
+\bibcite{trautman2015assistive}{64}
+\bibcite{uno1989formation}{65}
+\bibcite{wasson2003user}{66}
+\bibcite{watkins1992q}{67}
+\bibcite{ziebart2008maximum}{68}

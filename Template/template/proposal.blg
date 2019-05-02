@@ -3,16 +3,17 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proposal.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 195 of file references.bib
+I was expecting a `,' or a `}'---line 205 of file references.bib
  :  
  :  year={2016}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 202 of file references.bib
+I was expecting a `,' or a `}'---line 212 of file references.bib
  :  
  :  year={2016}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "cutsuridis2013cognitive"
 Warning--I didn't find a database entry for "silverman1986density"
 Warning--I didn't find a database entry for "kraskov2004estimating"
 Too many commas in name 1 of "Egli, Pascal Arturo, Gopinath, Deepak and Argall, Brenna" for entry egli2016call
@@ -23,45 +24,45 @@ while executing---line 1090 of file plain.bst
 Warning--empty year in egli2016call
 Warning--empty year in jainrobot
 Warning--empty journal in murphy2002dynamic
-You've used 67 entries,
+You've used 68 entries,
             2118 wiz_defined-function locations,
-            870 strings with 17452 characters,
-and the built_in function-call counts, 25059 in all, are:
-= -- 2461
-> -- 1285
+            880 strings with 17730 characters,
+and the built_in function-call counts, 25342 in all, are:
+= -- 2486
+> -- 1302
 < -- 20
-+ -- 511
-- -- 438
-* -- 1750
-:= -- 4079
-add.period$ -- 214
-call.type$ -- 67
-change.case$ -- 412
++ -- 518
+- -- 444
+* -- 1772
+:= -- 4132
+add.period$ -- 217
+call.type$ -- 68
+change.case$ -- 418
 chr.to.int$ -- 0
-cite$ -- 71
-duplicate$ -- 961
-empty$ -- 1908
-format.name$ -- 438
-if$ -- 5283
+cite$ -- 72
+duplicate$ -- 972
+empty$ -- 1928
+format.name$ -- 444
+if$ -- 5338
 int.to.chr$ -- 0
-int.to.str$ -- 67
-missing$ -- 71
-newline$ -- 337
-num.names$ -- 134
-pop$ -- 478
+int.to.str$ -- 68
+missing$ -- 72
+newline$ -- 342
+num.names$ -- 136
+pop$ -- 482
 preamble$ -- 1
-purify$ -- 350
+purify$ -- 355
 quote$ -- 0
-skip$ -- 685
+skip$ -- 692
 stack$ -- 0
-substring$ -- 1474
-swap$ -- 251
+substring$ -- 1479
+swap$ -- 252
 text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 258
+type$ -- 262
 warning$ -- 4
-while$ -- 235
-width$ -- 69
-write$ -- 727
+while$ -- 238
+width$ -- 70
+write$ -- 738
 (There were 4 error messages)

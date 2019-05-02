@@ -227,6 +227,14 @@ Sara Kiesler.
 \newblock In {\em Robot and Human Interactive Communication, 2005. ROMAN 2005.
   IEEE International Workshop on}, pages 729--734. IEEE, 2005.
 
+\bibitem{kim2012autonomy}
+Dae-Jin Kim, Rebekah Hazlett-Knudsen, Heather Culver-Godfrey, Greta Rucks, Tara
+  Cunningham, David Portee, John Bricout, Zhao Wang, and Aman Behal.
+\newblock How autonomy impacts performance and satisfaction: Results from a
+  study with spinal cord injured subjects using an assistive robot.
+\newblock {\em \textit{IEEE Transactions on Systems, Man, and Cybernetics-Part
+  A: Systems and Humans}}, 42(1):2--14, 2012.
+
 \bibitem{kirk1970optimal}
 Donald~E Kirk.
 \newblock {\em Optimal control theory: an introduction}.
@@ -337,6 +345,11 @@ Gregor Sch{\"o}ner, Michael Dose, and Christoph Engels.
 \newblock {\em \textit{Robotics and Autonomous Systems}}, 16(2-4):213--245,
   1995.
 
+\bibitem{schreiber2000measuring}
+Thomas Schreiber.
+\newblock Measuring information transfer.
+\newblock {\em Physical review letters}, 85(2):461, 2000.
+
 \bibitem{simpson2008tooth}
 Tyler Simpson, Colin Broughton, Michel~JA Gauthier, and Arthur Prochazka.
 \newblock Tooth-click control of a hands-free computer interface.
@@ -386,14 +399,6 @@ Yoji Uno, Mitsuo Kawato, and Rika Suzuki.
 \newblock Formation and control of optimal trajectory in human multijoint arm
   movement.
 \newblock {\em Biological cybernetics}, 61(2):89--101, 1989.
-
-\bibitem{wang2013probabilistic}
-Zhikun Wang, Katharina M{\"u}lling, Marc~Peter Deisenroth, Heni Ben~Amor, David
-  Vogt, Bernhard Sch{\"o}lkopf, and Jan Peters.
-\newblock Probabilistic movement modeling for intention inference in
-  human--robot interaction.
-\newblock {\em \textit{The International Journal of Robotics Research}},
-  32(7):841--858, 2013.
 
 \bibitem{wasson2003user}
 Glenn Wasson, Pradip Sheth, Majd Alwan, Kevin Granata, Alexandre Ledoux, and

@@ -171,8 +171,8 @@ Identify variables. Identify relationships at every timestep and unroll it in ti
 
 For a given time evolution of the system, one would be able to compute 'mutual information' based statistics (channel capacity, empowerment, transfer entropy, causal entropy). Interpretation of these metrics and statistics as specific soft aspects of HRI will be critical to make general claims. The softer aspects are coordination, transparency, cooperation.
 
-We should be able to intervene certain variables (externally?) so that the MI based metrics attain desirable values. Is this an optimal control problem. 
-	A DBN essentially represents a dynamical system. Given a dynamical system and an associated reward, then framing the problem as an optimal control problem lets you choosing 'control actions' (hte free variables?) such that the dynamical system evolves in a way to maximize the reward. 
+We should be able to intervene certain variables (externally?) so that the MI based metrics attain desirable values. Is this an optimal control problem? In some sense yes, but we are implicitly assuming that by changing autonomy (that's the only variable under our control) it will have an impact on how the human behaves. Therefore we need to have models for how the human behaves in the presence of autonomy? Can Koopman type approaches help in this? 
+	A DBN essentially represents a dynamical system. Given a dynamical system and an associated reward, then framing the problem as an optimal control problem lets you choosing 'control actions' (hte free variables?) such that the dynamical system evolves in a way to maximize the reward. Optimal control in the classical sense is a model-based approach. Model-Free approaches are used in RL type scenarios. But has high sample complexity. 
 
 PA loops for human
 
@@ -195,10 +195,13 @@ Meeting notes:
 1. Should shared control frameworks always presuppose the existence of a robot poloicy that is capable of accomplishing the task autonomously? That is, is it necessary to model u_r independent of u_h. This would require that there is another variable u (the final control command issued to the actuators) which is a result of deterministic or stochastic arbitration (synthesis) of uh and ur. 
 
 2. Even if we don't model u_r explicitly (from a generative point of view, that is the system is not computing a u_r independently beforehand) but only model a (which for example, can be result of optimizing a robot cost function that implicitly depends on uh), is there a need to model the user's perception of the additional help the robot is providing? Assuming self knowledge of what s/he issued via the control interface and how that signal affects the systems dynamics, the observation of the change in robot state will enable the user to infer the 'deviation' from their own control command, which they might interpret as robot assistance. This is a latent variable that is not directly observable, but has an impact on the user policy. 
+Implicitly this assumes the lack of other types of feedback mechanisms besides robot motion. 
 
-All the above can possibly be modeled within a MDP framework. 
+If the human has perfect idea of how the robot will move under his/her actions, the user might be able to attribute any deviation from expected motion to external agency (such as autonomy) intervening in what the human is doing? If the human deems this external intervention to be helpful/cooperative etc the human might 'go along' with it (doesn't necessarily imply that the human actions will be same, that human actions are NOT conditionally independent of robot actions)
 
-3. A control theoretic idea would be to consider the channel from user's actuators and their own sensors. The users use the actuators to affect change in the environment and the user's sensors perceive the change. Autonomy can be thought of as a side channel via which new information gets injected. Does the user consider this to be as noise in the channel? If the user is able to 'account for '
+All the above can possibly be modeled within a MDP/POMDP framework. 
+
+3. A control theoretic idea would be to consider the channel from user's actuators and their own sensors. The users use the actuators to affect change in the environment and the user's sensors perceive the change. Autonomy can be thought of as a side channel via which new information gets injected. Does the user consider this to be as noise in the channel? If the user is able to 'account for ' this noise as favorable (that is the interpretation is that of assistance) that is what we want. 
 
 
 Inference. 
@@ -214,7 +217,7 @@ Representing HRI as a DBN unrolling in time, need not necessarily presuppose suc
 Design of robot autonomy, in a way, corresponds to intervening certain nodes so as to guide the evolution of the entire system in favorable ways. 
 
 
-FOr modeling humans we are in general implicitly assuming that the sensors that we have are able to sense everything (except the latent internal state of the human (intent/operation style)) that are relevant for the human's decision. That is, the envirionment and the local context which are important for the human's actions/decision and which the human observes are completely observable by the sensors. Is this always correct? Our sensors have limitations and would not be able to measure/observe everything in the local context of the human's environment? Furthermore, there is difference in perspective as well which needs to be accounted for? 
+FOr modeling humans we are in general implicitly assuming that the sensors that we have are able to sense everything (except the latent internal state of the human (intent/operation style)) that are relevant for the human's decision. That is, the envirionment and the local context which are important for the human's actions/decision and which the human observes are completely observable by the sensors. Is this always correct? Our sensors have limitations and would not be able to measure/observe everything in the local context of the human's environment? Furthermore, there is difference in perspective as well which needs to be accounted for (Viewpoint issues)? 
 
 
 
@@ -238,21 +241,23 @@ Discussions with Brenna:
 	1. Human unable to understand what the system is doing and therefore begins to 'fight' the system by becoming more aggressive. 
 	2. Human unable to understand why the system is doing what it is doing? 
 	3. Human unable to understand what and why the system is doing what it is doing?
-	4. 
+	
+	All of this essentially points to the definition of transparency as predictability and observaibility of autonomy's actions. 
 
 Brenna:
 	1. Start with the full (maybe over detailed model) identifying all the finer and richer aspects of the interaction. Then start to trim it down. Incorporate the learning mechanism that are happening under the hood (for example, the human learning the transition model (dynamics) of the robot). 
 	2. Incorporate the fact that the autonomy and the robot has access to different (possibly complemenrary aspects of the true world state)
 
 
-2. What is that the agents need to be transparent about?
+2. What is that the agents need to be transparent about? 
 	Identify the variables that need to be modeled?
 
 3. With the variables in hand, what kind of models can be developed to quantify the level of transparency between the agents? 
 	Quantification of baseline interaction gives us an idea of whether to intervene and try to make it better?
 
 4. What metrics can be used to quantify transparency? 
-	Is transparency about improved predictability of other agent as a result of better understanding of the other agent's internal state? The most trivial way to e transparent is to explicitly indicate it (either using language or some other indicator interface like an LED display or something). 
+	Is transparency about improved predictability of other agent as a result of better understanding of the other agent's internal state? The most trivial way to be transparent is to explicitly indicate it (either using language or some other indicator interface like an LED display or something). 
+	How to experimentally test this? We can directly ask the observer whether the agent is being transparent about its intention. It could be a binary variable? It could be a continuous measure (give a slider). Or we could have the observer 'do something' that depends on their perception of how transparent the other agent is. 
 
 1. Main goal is to provide a theoretical framework to quantify and shape human robot interaction in a shared autonomy setting. More specifically, to be able to use the theoretical framework to understand the softer aspects of HRI? What is it that the system and the human need to be transparent about? 
 
@@ -274,13 +279,13 @@ Brenna:
 		Agent Human - refer's to the human's decision making entity, which is the brain. 
 		Environment from Human's Perspective - Agent's body, Robot's body, Robot's brain (system), Control interface
 
-		Agent System -  Refers to the 'artifical intelligent agent' controlling the robot. 
-		Environment from System's persective - Robot's body, Agent Human's body, Agent human's brain, Control interface
+		Agent System (Autonomy) -  Refers to the 'artifical intelligent agent' controlling the robot. 
+		Environment from Autonomy's persective - Robot's body, Agent Human's body, Agent human's brain, Control interface
 
 		VARIABLES:
 
 		H's internal state - Internal goals, beliefs about S's state and actions - S^u_t
-		H's policy - What H wants to do with the robot given H's internal state - U^htrue_t
+		H's policy - What H wants to do with the robot given H's internal state (and possibly world state, autonomy's inferred actions in the previous step, human's action in the previous timesteps.) - U^htrue_t
 		H's control command - H's policy filtered through the control interface - U^hCI_t - P(U^hCI_t | U^htrue_t) depends on the interface
 		CI's state - [Should this be included in the robot's physical state ?]
 
@@ -335,7 +340,7 @@ What are the various phenomena that is unfolding as the autonomy and the human i
 1. Human is trying to accomplish a task (which may have various subtasks). How can tasks be defined? As temporal sequences in time?
 2. Human is trying to learn how the robot works (the dynamics of the robotic system). How does the control generated via the control interface cause the robot to move? How does the 'image' on his/her retina change in time. 
 3. Human is trying to learn how the control interface is 'filtering/affecting' the person's true intent. How does the control interface work?what is it doing to what I am doing?[IS IT IMPORTANT TO MODEL WHAT THE HUMAN ACTUALLY DOES, FOR EXAMPLE, BLOW, MOVE HAND, MOVE HEAD. 
-	Is the true intent of the human expressed in task space?]
+	Is the true intent of the human expressed in task space for goal-driven tasks? Am I thinking too specific manipulation?
 4. Human is trying to learn what and why the autonomy is doing what it is doing. 
 
 5. Autonomy is trying to infer what the users' goal is? [Assuming that there is some task or goal that the human is trying to accomplish using the robot. ]
@@ -352,7 +357,7 @@ Autonomy can have different objectives that it is trying to accomplish.
 	a. For exmaple, help the human better understand the robot dynamics. (so that the user can better understand how the robot moves when s/he issues a particualr command type). As an example, the autonomy will probably make the robot to move to different parts of the workspace and ask the human to operate the robot in specific control modes so that the human has a better idea of how the robot works and is able to generalize the dynamis better to different situations. This can help in designing good training phases. 
 	b. Make itself clear to the human regarding how and why the autonomy is doing what it is doing. 
 	c. Facilitate learning of the control interface mapping. 
-	d. Coax the human (via autonomy interventions) to generate interventions that will help them understand the underlying robot dynamics and the autonomy better
+	d. Coax the human (via autonomy interventions) to generate control actions that will help them understand the underlying robot dynamics and the autonomy better
 
 
 October 1 2018:
@@ -363,7 +368,9 @@ How can 'different' types of shared control paradigm be subsumed into the same C
 	My argument is that it can be. For different scenarios the nature of communication might be different. In some cases, one party might be 'transferring information' to the other only intermittently and in a discrete fashion. For example, situations in which the human uses a click interface to select a goal to go to. 
 
 	In some cases there is NO ambiguity between human intention and the autonomy's inference of human's intentions as the human's intentions (goals) are fully specified. What is there, in such situations, that could be better? It could be that the human can select an object from a list of objects, without any trouble and the manipulator is supposed to move towards it. It might be better if the autonomy drives the robot in such a way that a) the human's confidence in the autonomy's understanding of his/her intentions is high, that is, the human might think that 'I think that the robot understands what I want' b) the autonomy 'expresses' its understanding of human's intention through legible and unambiguous motion thereby improving the humans confidence.  Both a and b are interrelated. So the question of 
-	how should autonomy drive the robot' can be guided by the principle that the motion should 'transfer maximum information regarding the autonomy's supposedly perfect understanding of human's intention to the human. 
+	how should autonomy drive the robot' can be guided by the principle that the motion should 'transfer maximum information regarding the autonomy's supposedly perfect understanding of human's intention to the human (once again assumes that the modality for being transparenct is that of motion). 
+
+	Why is motion such an attractive prospect?Coz its free. As long as we have an embodied agent, motion is part of it. If we can leverage motion to communicate intent (along with other aspects of interaction such as logic behind how autonomy is helping) that is likely going to be most efficient.
 
 	Human has an internal state: Human also has a estimate of how much autonomy 'understands' his/her internal state. A cooperative human might try to 'express' his/her internal state in the hope that the autonomy would understand his/her internal state. 
 
@@ -494,7 +501,7 @@ The main purpose of introduction of autonomy to such scenarios is to 'fill the g
 
 The notion of empowerment, on the other hand, has been used to characterize an agent's ability to manipulate the environment and perceive the effect of the manipulation at a later time. Consider a scenario where an uninjured subject is able to control a robotic arm perfectly to accomplish a task. We are assuming that the person has sound knowledge about the robot dynamics (that is given the current robot state and particular action, s/he is able to predict the next state quite accurately) and also has great skill (which amounts to having a good inverse controller that is given a state and a next state, s/he is able to generate the action that will bring about the necessary state transition). In this case the user is empowermed to bring about change in the environment (that is, control the robot and manipulate objects) and can perceive the change. 
 
-A's action should be such that B's empowerment over the environment is high in the presence of A's action should be high. Think of agent A as a hidden force working under the hood magically improving agent B's empowerment. 
+A's action should be such that B's empowerment over the environment in the presence of A's action should be high. Think of agent A as a hidden force working under the hood magically improving agent B's empowerment. 
 
 2. SHARED AUTONOMY PARADIGM THAT INCENTIVIZES COOPERATIVE BEHAVIOR FROM THE HUMAN
 
@@ -671,3 +678,60 @@ Varaible that can affect 'transparency': Direction, Dropout, Amplitude.
 	Measurements:
 	Time to task completion? Better transparency --> Might result in faster trials
 	Time at which users commit to a goal. 
+
+
+Jessies Chen -  Human Factors research related to Transparency models. 
+https://scholar.google.com/citations?user=gC88o24AAAAJ&hl=en&oi=sra
+
+
+Code structure:
+
+mico_base
+	standard code base. will not be using the teleop in here. 
+mico_autonomy
+	subscribes to mico_pfields (or any other autonomy generator). Has signal sparsity and directional noise related parameters. Incorporate dynamic reconfigure in here for different settings of transparency related parameters. 
+mico_pfields
+	autonomy policy provider. could be replaced by mico_legible_policy or something?
+mico_blend
+	blend node that takes care of how the autonomy and human should interact. 
+		things to decide
+			1. how exactly is the blending mediates. Should this be a fixed alpha. Should this be more like a turn taker? 
+			That is, if the human teleoperates, the autonomy stops doing what its doing? And if the human stops, the autonomy resumes.
+			Sort of like a turn taking paradigm. We need them to do back and forth. 
+			How to ensure that the human does not wait indefinitely? That is what happens if the human does not move the robot until the autonomy decides to act. Can a timeout type paradigm enforce that. Most likely, the user nmight make a guess and go for a it. Might or might not be correct. How can we make sure that when the autonomy doesn't provide good signals the humans still ct (but the actions are 'more' random than when the autonomy is being more transparent. )
+mico_teleop
+mico_inference
+	probably not used as in this study there won't be any inference. the inference happens in the human's head. 
+
+
+
+Guided Active Learning:
+
+Generate two information density maps. 
+
+phi_1(x) - captures how users typically explore the state space during self-guided learning. 
+phi_2(x) - captures where user tend to get stuck. possibly due to cognitively hard zones. possibly due to loss of focus. Whatever it is, more time is spend due to some sort of distraction? 
+
+During training, we want the user to spend more time exploring robot contril in regions where they get stuck, and also in regions where they don't typically go at all. 
+
+This is captured by phi2 - phi1
+
+Training_1:
+
+Samples points according to phi2 - phi1. Have them explore around those points (any structure to this, or should this be self guided locally?)
+
+Do this a bunch of times. Generate phi1'(x)
+
+Testing_1:
+Have them do tasks. Collect trajectories. This is phi2(x). It is possible that due to the training, the cognitively harder zones have become easier. And maybe something else is now harder. 
+
+we have ph2'(x) - ph1-(x). 
+
+Training_2:
+( phi2' - phi1') + w*phi2 - phi1  with 0 < w < 0.1. 
+
+Use a weighted approach? 
+
+phi2'' - phi1'' + w*(phi2' - phi1') + w*w*(phi2 - phi1)  with 0 < w < 0.1. 
+
+
