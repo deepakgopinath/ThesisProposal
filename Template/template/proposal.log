@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  1 MAY 2019 11:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  3 MAY 2019 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -358,10 +358,18 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen145
+\extrarowheight=\dimen146
+\NC@list=\toks28
+\extratabsurround=\skip59
+\backup@length=\skip60
+)
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
-\@float@every@algorithm=\toks28
+\@float@every@algorithm=\toks29
 \c@algorithm=\count123
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
@@ -370,8 +378,8 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@line=\count125
 \c@ALC@rem=\count126
 \c@ALC@depth=\count127
-\ALC@tlm=\skip59
-\algorithmicindent=\skip60
+\ALC@tlm=\skip61
+\algorithmicindent=\skip62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/breqn.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -432,18 +440,18 @@ Package: l3file 2013/10/13 v4596 L3 File and I/O operations
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3skip.sty
 Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
-\c_zero_dim=\dimen145
-\c_max_dim=\dimen146
-\l_tmpa_dim=\dimen147
-\l_tmpb_dim=\dimen148
-\g_tmpa_dim=\dimen149
-\g_tmpb_dim=\dimen150
-\c_zero_skip=\skip61
-\c_max_skip=\skip62
-\l_tmpa_skip=\skip63
-\l_tmpb_skip=\skip64
-\g_tmpa_skip=\skip65
-\g_tmpb_skip=\skip66
+\c_zero_dim=\dimen147
+\c_max_dim=\dimen148
+\l_tmpa_dim=\dimen149
+\l_tmpb_dim=\dimen150
+\g_tmpa_dim=\dimen151
+\g_tmpb_dim=\dimen152
+\c_zero_skip=\skip63
+\c_max_skip=\skip64
+\l_tmpa_skip=\skip65
+\l_tmpb_skip=\skip66
+\g_tmpa_skip=\skip67
+\g_tmpb_skip=\skip68
 \c_zero_muskip=\muskip12
 \c_max_muskip=\muskip13
 \l_tmpa_muskip=\muskip14
@@ -479,13 +487,13 @@ Package: l3box 2013/07/28 v4581 L3 Experimental boxes
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3coffins.sty
 Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
 \l__coffin_internal_box=\box41
-\l__coffin_internal_dim=\dimen151
-\l__coffin_offset_x_dim=\dimen152
-\l__coffin_offset_y_dim=\dimen153
-\l__coffin_x_dim=\dimen154
-\l__coffin_y_dim=\dimen155
-\l__coffin_x_prime_dim=\dimen156
-\l__coffin_y_prime_dim=\dimen157
+\l__coffin_internal_dim=\dimen153
+\l__coffin_offset_x_dim=\dimen154
+\l__coffin_offset_y_dim=\dimen155
+\l__coffin_x_dim=\dimen156
+\l__coffin_y_dim=\dimen157
+\l__coffin_x_prime_dim=\dimen158
+\l__coffin_y_prime_dim=\dimen159
 \c_empty_coffin=\box42
 \l__coffin_aligned_coffin=\box43
 \l__coffin_aligned_internal_coffin=\box44
@@ -494,9 +502,9 @@ Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
 \l__coffin_display_coffin=\box47
 \l__coffin_display_coord_coffin=\box48
 \l__coffin_display_pole_coffin=\box49
-\l__coffin_display_offset_dim=\dimen158
-\l__coffin_display_x_dim=\dimen159
-\l__coffin_display_y_dim=\dimen160
+\l__coffin_display_offset_dim=\dimen160
+\l__coffin_display_x_dim=\dimen161
+\l__coffin_display_y_dim=\dimen162
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3color.sty
 Package: l3color 2012/08/29 v4156 L3 Experimental color support
@@ -508,22 +516,22 @@ Package: l3luatex 2013/07/28 v4581 L3 Experimental LuaTeX-specific functions
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3candidates.sty
 Package: l3candidates 2014/01/06 v4643 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen161
-\l__box_bottom_dim=\dimen162
-\l__box_left_dim=\dimen163
-\l__box_right_dim=\dimen164
-\l__box_top_new_dim=\dimen165
-\l__box_bottom_new_dim=\dimen166
-\l__box_left_new_dim=\dimen167
-\l__box_right_new_dim=\dimen168
+\l__box_top_dim=\dimen163
+\l__box_bottom_dim=\dimen164
+\l__box_left_dim=\dimen165
+\l__box_right_dim=\dimen166
+\l__box_top_new_dim=\dimen167
+\l__box_bottom_new_dim=\dimen168
+\l__box_left_new_dim=\dimen169
+\l__box_right_new_dim=\dimen170
 \l__box_internal_box=\box50
-\l__coffin_bounding_shift_dim=\dimen169
-\l__coffin_left_corner_dim=\dimen170
-\l__coffin_right_corner_dim=\dimen171
-\l__coffin_bottom_corner_dim=\dimen172
-\l__coffin_top_corner_dim=\dimen173
-\l__coffin_scaled_total_height_dim=\dimen174
-\l__coffin_scaled_width_dim=\dimen175
+\l__coffin_bounding_shift_dim=\dimen171
+\l__coffin_left_corner_dim=\dimen172
+\l__coffin_right_corner_dim=\dimen173
+\l__coffin_bottom_corner_dim=\dimen174
+\l__coffin_top_corner_dim=\dimen175
+\l__coffin_scaled_total_height_dim=\dimen176
+\l__coffin_scaled_width_dim=\dimen177
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
@@ -572,73 +580,74 @@ LaTeX Info: Redefining \genfrac on input line 121.
 ))
 \inf@bad=\count152
 \maxint=\count153
-\listwidth=\dimen176
-\eqnumsep=\dimen177
-\eqmargin=\dimen178
-\eqlinespacing=\skip67
-\eqlineskip=\skip68
-\eqlineskiplimit=\dimen179
+\listwidth=\dimen178
+\eqnumsep=\dimen179
+\eqmargin=\dimen180
+\eqlinespacing=\skip69
+\eqlineskip=\skip70
+\eqlineskiplimit=\dimen181
 \eqbinoffset=\muskip18
 \eqdelimoffset=\muskip19
-\eqindentstep=\dimen180
-\eqstyle=\toks29
+\eqindentstep=\dimen182
+\eqstyle=\toks30
 \eqbreakdepth=\count154
 \eqinterlinepenalty=\count155
 \intereqpenalty=\count156
-\intereqskip=\skip69
+\intereqskip=\skip71
 \prerelpenalty=\count157
 \prebinoppenalty=\count158
 \Dmedmuskip=\muskip20
 \Dthickmuskip=\muskip21
-\eqleftskip=\skip70
-\eqrightskip=\skip71
-\eq@vspan=\skip72
+\eqleftskip=\skip72
+\eqrightskip=\skip73
+\eq@vspan=\skip74
 \eq@binoffset=\muskip22
 \EQ@box=\box51
 \EQ@copy=\box52
 \EQ@numbox=\box53
-\eq@wdNum=\dimen181
+\eq@wdNum=\dimen183
 \GRP@numbox=\box54
-\grp@wdNum=\dimen182
+\grp@wdNum=\dimen184
 \eq@lines=\count159
 \eq@curline=\count160
 \eq@badness=\count161
 \EQ@vims=\count162
-\eq@dp=\dimen183
-\eq@wdL=\dimen184
-\eq@wdT=\dimen185
-\eq@wdMin=\dimen186
-\grp@wdL=\dimen187
-\grp@wdR=\dimen188
-\grp@wdT=\dimen189
-\eq@wdRmax=\dimen190
-\eq@firstht=\dimen191
-\eq@wdCond=\dimen192
-\eq@indentstep=\dimen193
-\eq@linewidth=\dimen194
-\grp@linewidth=\dimen195
-\eq@hshift=\dimen196
-\eq@given@sidespace=\dimen197
-\mathindent=\dimen198
+\eq@dp=\dimen185
+\eq@wdL=\dimen186
+\eq@wdT=\dimen187
+\eq@wdMin=\dimen188
+\grp@wdL=\dimen189
+\grp@wdR=\dimen190
+\grp@wdT=\dimen191
+\eq@wdRmax=\dimen192
+\eq@firstht=\dimen193
+\eq@wdCond=\dimen194
+\eq@indentstep=\dimen195
+\eq@linewidth=\dimen196
+\grp@linewidth=\dimen197
+\eq@hshift=\dimen198
+\eq@given@sidespace=\dimen199
+\mathindent=\dimen200
 \eq@final@linecount=\count163
-\eq@wdR=\dimen199
-\EQ@continue=\toks30
+\eq@wdR=\dimen201
+\EQ@continue=\toks31
 \lr@level=\count164
-\GRP@queue=\toks31
+\GRP@queue=\toks32
 \GRP@box=\box55
 \GRP@wholebox=\box56
-\darraycolsep=\skip73
+\darraycolsep=\skip75
 \cur@row=\count165
 \cur@col=\count166
-\conditionsep=\skip74
+\conditionsep=\skip76
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks32
-\footnotemargin=\dimen200
+\FN@temptoken=\toks33
+Normal \dimen register pool exhausted, switching to extended pool.
+\footnotemargin=\dimen256
 \c@pp@next@reset=\count167
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
@@ -655,36 +664,35 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
  (./proposal.aux)
 \openout1 = `proposal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count171
-\scratchdimen=\dimen201
+\scratchdimen=\dimen257
 \scratchbox=\box57
 \nofMPsegments=\count172
 \nofMParguments=\count173
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks34
 \MPscratchCnt=\count174
-Normal \dimen register pool exhausted, switching to extended pool.
-\MPscratchDim=\dimen256
+\MPscratchDim=\dimen258
 \MPnumerator=\count175
 \makeMPintoPDFobject=\count176
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -729,7 +737,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 62.
+LaTeX Info: Redefining \microtypecontext on input line 63.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -744,13 +752,13 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -758,7 +766,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -766,21 +774,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 65.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
  (./proposal.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
@@ -794,54 +802,58 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 [5] [6] [7] [8] [9] [10]
 
 LaTeX Warning: Citation `cutsuridis2013cognitive' on page 11 undefined on input
- line 245.
+ line 248.
 
 [11] <./figures/pa_loop.png, id=50, 1071.00125pt x 545.03625pt>
 File: ./figures/pa_loop.png Graphic file (type png)
 
 <use ./figures/pa_loop.png>
-Package pdftex.def Info: ./figures/pa_loop.png used on input line 251.
+Package pdftex.def Info: ./figures/pa_loop.png used on input line 254.
 (pdftex.def)             Requested size: 469.75499pt x 239.05988pt.
  [12 <./figures/pa_loop.png>] [13]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 303.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 306.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 303.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 306.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 303.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 306.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 303.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 306.
  [14]
 
 LaTeX Warning: Citation `silverman1986density' on page 15 undefined on input li
-ne 321.
+ne 324.
 
 
 LaTeX Warning: Citation `kraskov2004estimating' on page 15 undefined on input l
-ine 330.
+ine 333.
 
-[15] [16] [17] [18] [19] [20] (./proposal.bbl
+[15] [16] [17] [18] [19] [20] [21]
+Overfull \hbox (21.48909pt too wide) in paragraph at lines 653--673
+ [] 
+ []
+
+(./proposal.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [21] [22] [23])
+ [22] [23] [24])
 \Changes@OutFile=\write4
 \openout4 = `proposal.soc'.
 
- [24]
-(./proposal.aux)
+ [25] (./proposal.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13460 strings out of 495028
- 226036 string characters out of 6181497
- 393732 words of memory out of 5000000
- 15941 multiletter control sequences out of 15000+600000
- 63096 words of font info for 370 fonts, out of 8000000 for 9000
+ 13498 strings out of 495028
+ 226493 string characters out of 6181497
+ 395458 words of memory out of 5000000
+ 15982 multiletter control sequences out of 15000+600000
+ 62810 words of font info for 367 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,51p,10405b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,51p,10405b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/
@@ -860,10 +872,10 @@ ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on proposal.pdf (27 pages, 325922 bytes).
+Output written on proposal.pdf (28 pages, 327565 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 169 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  40454 words of extra memory for PDF output out of 42996 (max. 10000000)
 
