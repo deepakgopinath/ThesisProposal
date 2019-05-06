@@ -703,6 +703,17 @@ mico_teleop
 mico_inference
 	probably not used as in this study there won't be any inference. the inference happens in the human's head. 
 
+Transparency?
+
+How much information regarding underlying intent has been revealed up until now via motion? 
+When that integrated information passes a threshold does it become fully transparent? How is this different from the legibility metric which is the integral of the weight posterior of the true goal? Legibility uses a single value that tracks the probability associated with actual goal (pursued by the robot) 
+
+There is a notion of 'information transfer'. The 'learner' here is the human. The hypothesis that the learner is trying to learn is which is th goal given the data. Section 4.2.2 in Intro to TE book talks about computational interpretation of TE as information transfer from source to target process. 
+
+Target process could be thought of as uh_1.uh_2....uh_t
+Source process could be thought of as ur_1. ur_2....ur_t
+
+If we want interacting autonomy and human signals. We want probably to different 'robot agents'. One which uses only the autonomy, the other which uses the human control. 
 
 
 Guided Active Learning:
