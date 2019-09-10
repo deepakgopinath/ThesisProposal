@@ -3,19 +3,20 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proposal.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 205 of file references.bib
+Repeated entry---line 146 of file references.bib
+ : @inproceedings{lyons2013being
+ :                              ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 312 of file references.bib
  :  
  :  year={2016}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 212 of file references.bib
+I was expecting a `,' or a `}'---line 319 of file references.bib
  :  
  :  year={2016}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "cutsuridis2013cognitive"
-Warning--I didn't find a database entry for "silverman1986density"
-Warning--I didn't find a database entry for "kraskov2004estimating"
 Too many commas in name 1 of "Egli, Pascal Arturo, Gopinath, Deepak and Argall, Brenna" for entry egli2016call
 while executing---line 1049 of file plain.bst
 Warning--there's a number but no volume in abbink2018topology
@@ -24,45 +25,45 @@ while executing---line 1090 of file plain.bst
 Warning--empty year in egli2016call
 Warning--empty year in jainrobot
 Warning--empty journal in murphy2002dynamic
-You've used 68 entries,
+You've used 79 entries,
             2118 wiz_defined-function locations,
-            880 strings with 17730 characters,
-and the built_in function-call counts, 25342 in all, are:
-= -- 2486
-> -- 1302
-< -- 20
-+ -- 518
-- -- 444
-* -- 1772
-:= -- 4132
-add.period$ -- 217
-call.type$ -- 68
-change.case$ -- 418
+            945 strings with 19538 characters,
+and the built_in function-call counts, 29143 in all, are:
+= -- 2872
+> -- 1451
+< -- 24
++ -- 578
+- -- 492
+* -- 2031
+:= -- 4743
+add.period$ -- 253
+call.type$ -- 79
+change.case$ -- 474
 chr.to.int$ -- 0
-cite$ -- 72
-duplicate$ -- 972
-empty$ -- 1928
-format.name$ -- 444
-if$ -- 5338
+cite$ -- 83
+duplicate$ -- 1128
+empty$ -- 2250
+format.name$ -- 492
+if$ -- 6153
 int.to.chr$ -- 0
-int.to.str$ -- 68
-missing$ -- 72
-newline$ -- 342
-num.names$ -- 136
-pop$ -- 482
+int.to.str$ -- 79
+missing$ -- 84
+newline$ -- 397
+num.names$ -- 158
+pop$ -- 543
 preamble$ -- 1
-purify$ -- 355
+purify$ -- 401
 quote$ -- 0
-skip$ -- 692
+skip$ -- 797
 stack$ -- 0
-substring$ -- 1479
-swap$ -- 252
-text.length$ -- 20
+substring$ -- 1739
+swap$ -- 288
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 262
+type$ -- 304
 warning$ -- 4
-while$ -- 238
-width$ -- 70
-write$ -- 738
-(There were 4 error messages)
+while$ -- 279
+width$ -- 81
+write$ -- 861
+(There were 5 error messages)

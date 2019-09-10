@@ -17,6 +17,12 @@ Nihat Ay and Daniel Polani.
 \newblock Information flows in causal networks.
 \newblock {\em Advances in complex systems}, 11(01):17--41, 2008.
 
+\bibitem{bengio2009curriculum}
+Yoshua Bengio, J{\'e}r{\^o}me Louradour, Ronan Collobert, and Jason Weston.
+\newblock Curriculum learning.
+\newblock In {\em Proceedings of the 26th annual international conference on
+  machine learning}, pages 41--48. ACM, 2009.
+
 \bibitem{bojarski2016end}
 Mariusz Bojarski, Davide Del~Testa, Daniel Dworakowski, Bernhard Firner, Beat
   Flepp, Prasoon Goyal, Lawrence~D Jackel, Mathew Monfort, Urs Muller, Jiakai
@@ -64,6 +70,13 @@ Thomas~M Cover and Joy~A Thomas.
 \newblock {\em Elements of information theory}.
 \newblock John Wiley \& Sons, 2012.
 
+\bibitem{cutsuridis2013cognitive}
+Vassilis Cutsuridis.
+\newblock Cognitive models of the perception-action cycle: A view from the
+  brain.
+\newblock In {\em The 2013 International Joint Conference on Neural Networks
+  (IJCNN)}, pages 1--8. IEEE, 2013.
+
 \bibitem{demeester2008user}
 Eric Demeester, Alexander H{\"u}ntemann, Dirk Vanhooydonck, Gerolf Vanacker,
   Hendrik Van~Brussel, and Marnix Nuttin.
@@ -99,6 +112,12 @@ Gopinath~Deepak Egli, Pascal~Arturo and Brenna Argall.
 \newblock A call for convergence of research directions in assistive robotics.
 \newblock In {\em RSS Workshop on Socially and Physically Assistive Robotics
   for Humanity, Ann Arbor, Michigan, USA}.
+
+\bibitem{endsley2017here}
+Mica~R Endsley.
+\newblock From here to autonomy: lessons learned from human--automation
+  research.
+\newblock {\em Human Factors}, 59(1):5--27, 2017.
 
 \bibitem{fischinger2016hobbit}
 David Fischinger, Peter Einramhof, Konstantinos Papoutsakis, Walter Wohlkinger,
@@ -153,6 +172,12 @@ Shixiang~Shane Gu, Zoubin Ghahramani, and Richard~E Turner.
 \newblock In {\em Advances in Neural Information Processing Systems}, pages
   2629--2637, 2015.
 
+\bibitem{guastello1998origins}
+Stephen~J Guastello and Denise~D Guastello.
+\newblock Origins of coordination and team effectiveness: A perspective from
+  game theory and nonlinear dynamics.
+\newblock {\em Journal of applied psychology}, 83(3):423, 1998.
+
 \bibitem{herlant2016assistive}
 Laura~V. Herlant, Rachel~M. Holladay, and Siddhartha~S. Srinivasa.
 \newblock Assistive teleoperation of robot arms via automatic time-optimal mode
@@ -183,12 +208,6 @@ Guy Hoffman and Cynthia Breazeal.
 Chien-Ming Huang, Sean Andrist, Allison Saupp{\'e}, and Bilge Mutlu.
 \newblock Using gaze patterns to predict task intent in collaboration.
 \newblock {\em Frontiers in psychology}, 6:1049, 2015.
-
-\bibitem{ikemoto2012physical}
-Shuhei Ikemoto, Heni~Ben Amor, Takashi Minato, Bernhard Jung, and Hiroshi
-  Ishiguro.
-\newblock Physical human-robot interaction: Mutual learning and adaptation.
-\newblock {\em IEEE robotics \& automation magazine}, 19(4):24--35, 2012.
 
 \bibitem{jainrobot}
 Siddarth Jain and Brenna Argall.
@@ -252,6 +271,16 @@ Daphne Koller, Nir Friedman, and Francis Bach.
 \newblock {\em Probabilistic graphical models: principles and techniques}.
 \newblock MIT press, 2009.
 
+\bibitem{kozlowski2012dynamics}
+Steve~WJ Kozlowski and Georgia~T Chao.
+\newblock The dynamics of emergence: Cognition and cohesion in work teams.
+\newblock {\em Managerial and Decision Economics}, 33(5-6):335--354, 2012.
+
+\bibitem{kraskov2004estimating}
+Alexander Kraskov, Harald St{\"o}gbauer, and Peter Grassberger.
+\newblock Estimating mutual information.
+\newblock {\em Physical review E}, 69(6):066138, 2004.
+
 \bibitem{kuffner2000rrt}
 James~J Kuffner and Steven~M LaValle.
 \newblock Rrt-connect: An efficient approach to single-query path planning.
@@ -263,6 +292,12 @@ Mitchell~P LaPlante et~al.
 \newblock Assistive technology devices and home accessibility features:
   prevalence, payment, need, and trends.
 \newblock {\em \textit{Advance Data from Vital and Health Statistics}}, 1992.
+
+\bibitem{lyons2013being}
+Joseph~B Lyons.
+\newblock Being transparent about transparency: A model for human-robot
+  interaction.
+\newblock In {\em 2013 AAAI Spring Symposium Series}, 2013.
 
 \bibitem{lyons2014transparency}
 Joseph~B Lyons and Paul~R Havig.
@@ -333,6 +368,11 @@ Patrick~M Pilarski, Michael~R Dawson, Thomas Degris, Jason~P Carey, and
   Conference on Biomedical Robotics and Biomechatronics (BioRob) }}, pages
   296--302. IEEE, 2012.
 
+\bibitem{rand2013human}
+David~G Rand and Martin~A Nowak.
+\newblock Human cooperation.
+\newblock {\em Trends in cognitive sciences}, 17(8):413--425, 2013.
+
 \bibitem{ratliff2018riemannian}
 Nathan~D Ratliff, Jan Issac, and Daniel Kappler.
 \newblock Riemannian motion policies.
@@ -349,6 +389,11 @@ Gregor Sch{\"o}ner, Michael Dose, and Christoph Engels.
 Thomas Schreiber.
 \newblock Measuring information transfer.
 \newblock {\em Physical review letters}, 85(2):461, 2000.
+
+\bibitem{silverman1986density}
+Bernard~W Silverman.
+\newblock {\em Density estimation for statistics and data analysis}, volume~26.
+\newblock CRC press, 1986.
 
 \bibitem{simpson2008tooth}
 Tyler Simpson, Colin Broughton, Michel~JA Gauthier, and Arthur Prochazka.
@@ -376,11 +421,22 @@ Karim~A Tahboub.
   networks probabilistic intention recognition.
 \newblock {\em Journal of Intelligent and Robotic Systems}, 45(1):31--52, 2006.
 
+\bibitem{theodorou2017designing}
+Andreas Theodorou, Robert~H Wortham, and Joanna~J Bryson.
+\newblock Designing and implementing transparency for real time inspection of
+  autonomous robots.
+\newblock {\em Connection Science}, 29(3):230--241, 2017.
+
 \bibitem{thomaz2011turn}
 Andrea~L Thomaz and Crystal Chao.
 \newblock Turn-taking based on information flow for fluent human-robot
   interaction.
 \newblock {\em AI Magazine}, 32(4):53--63, 2011.
+
+\bibitem{tishby2011information}
+Naftali Tishby and Daniel Polani.
+\newblock Information theory of decisions and actions.
+\newblock In {\em Perception-action cycle}, pages 601--636. Springer, 2011.
 
 \bibitem{tomasello2007shared}
 Michael Tomasello and Malinda Carpenter.
@@ -412,6 +468,13 @@ Glenn Wasson, Pradip Sheth, Majd Alwan, Kevin Granata, Alexandre Ledoux, and
 Christopher~JCH Watkins and Peter Dayan.
 \newblock Q-learning.
 \newblock {\em Machine learning}, 8(3-4):279--292, 1992.
+
+\bibitem{zhang2017human}
+Juanjuan Zhang, Pieter Fiers, Kirby~A Witte, Rachel~W Jackson, Katherine~L
+  Poggensee, Christopher~G Atkeson, and Steven~H Collins.
+\newblock Human-in-the-loop optimization of exoskeleton assistance during
+  walking.
+\newblock {\em Science}, 356(6344):1280---1284, 2017.
 
 \bibitem{ziebart2008maximum}
 Brian~D Ziebart, Andrew~L Maas, J~Andrew Bagnell, and Anind~K Dey.

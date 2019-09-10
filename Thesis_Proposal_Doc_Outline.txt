@@ -708,7 +708,7 @@ Transparency?
 How much information regarding underlying intent has been revealed up until now via motion? 
 When that integrated information passes a threshold does it become fully transparent? How is this different from the legibility metric which is the integral of the weight posterior of the true goal? Legibility uses a single value that tracks the probability associated with actual goal (pursued by the robot) 
 
-There is a notion of 'information transfer'. The 'learner' here is the human. The hypothesis that the learner is trying to learn is which is th goal given the data. Section 4.2.2 in Intro to TE book talks about computational interpretation of TE as information transfer from source to target process. 
+There is a notion of 'information transfer'. The 'learner' here is the human. The hypothesis that the learner is trying to learn is which is th goal given the data. Section 4.2.2 in Intro to TE book talks about computational interpretation of TE as information transfer from source to target process. The robot's actions is conveying some information regarding one of the reaching goals. This information transfereed from the robot to the human is helping to reduce the entropy of the belief over goals that the observer maintains. 
 
 Target process could be thought of as uh_1.uh_2....uh_t
 Source process could be thought of as ur_1. ur_2....ur_t
@@ -729,14 +729,16 @@ This is captured by phi2 - phi1
 
 Training_1:
 
-Samples points according to phi2 - phi1. Have them explore around those points (any structure to this, or should this be self guided locally?)
+Samples points according to phi2 - phi1. Have them explore around those points (any structure to this, or should this be self guided locally?) Maybe creat non-zero velocities beyond a certain local region around that sampled point. that the user has now to focus on what happens in that local neighborhood  
 
-Do this a bunch of times. Generate phi1'(x)
+Do this a bunch of times. Generate phi1'(x) - This is autonomy-guided exploration map. This will be highly concentrated around the chosen sample points? 
 
 Testing_1:
-Have them do tasks. Collect trajectories. This is phi2(x). It is possible that due to the training, the cognitively harder zones have become easier. And maybe something else is now harder. 
+Have them do tasks. Collect trajectories. This is phi2'(x). It is possible that due to the training, the cognitively harder zones have become easier. And maybe something else is now harder. 
 
-we have ph2'(x) - ph1-(x). 
+What kind of tasks? Should these tasks involve regions that were explored during training 1 as well?  Or should it be the first round of task?
+
+we have ph2'(x) - ph1'(x). 
 
 Training_2:
 ( phi2' - phi1') + w*phi2 - phi1  with 0 < w < 0.1. 
@@ -746,3 +748,41 @@ Use a weighted approach?
 phi2'' - phi1'' + w*(phi2' - phi1') + w*w*(phi2 - phi1)  with 0 < w < 0.1. 
 
 
+Other ideas:
+
+human-to-robot transparency could be used to optimize parameters of the inference schemes? Given ground truth and a given parametrized inference scheme, find the poptimal set of parameters that maximizes human-to-robot transparency? Could be related to optimizing task performance (one way of accomplsihing it?) So the 'design of autonomy' is about find params for inference and not about creating policy. 
+
+COde stuff:
+
+1. Init goals. Creat node. Probably a service based paradigm. so that autonomy and human node pull the goal positions from the node. - DONe
+2. Add "Attractor vel to autonomy node. " - DONE
+
+Possible smoothing neewded. 
+3. Add dynamic reconfigure for transparency params in autonomy node -  done
+
+4. Create a reinit mechanism? So that the game doesn't have to be quit every single time. 
+
+
+NN for characterizing HAI:
+
+How about data collection in which the human is interacting with autonomy via controlling a robot. And an observer labels the data as the HAI is happening. PReceiving transparency of interaction as labelled by an observer. When things go wrong and are not coordinated maybe it shows in how they act? 
+
+How they react, throwing their arms up in the air, shaking their heads, cuss words are all cues. Can video data capture this? Can CNN-LSTM type structures on video capture frutration that sets in? 
+
+NN's can possibly learn the right type of features which can inform the transparency levels. 
+
+We want
+
+
+
+Contuinity Eq formulation of Inference? 
+
+How to incorpoate memory and forgetting into inference problem. How does this affect the standard Bayesian formalism? 
+
+What does it mean to model the interactiosn between the particles (in a statistical physics sense) in the particle flow bayes role approach? How does it affect the flow euqations and the evoluation of the posterior? 
+
+
+Treat DNF in a similar sense. Visualize pdf as a water balloon. The amount of water is the same but the same changes in a continuous fashion based on the 'forces' acting upon it. Avoid posterior mode collapse etc before densities can't magically vanish and appear at random places. 
+
+
+Ideate the survey paper? How has information theoretic ideas used in HRI? For what purposes? 

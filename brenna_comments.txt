@@ -1,0 +1,177 @@
+brenna_comments.txt
+
+Chapter 1:
+
+I think you still need to go further (here, and throughout the document) 
+in addressing the confusion between autonomy on the one hand being what 
+controls the robot, and on the other being "appropriately timed 
+interventions" that alter information flow. I think what you are 
+actually getting at here is that one factor in autonomy design is to 
+appropriately time these interventions. (Or perhaps, rather the HAI 
+design?) Optimizing information flow is not *all* that the autonomy 
+does, nor all that is considered in autonomy design. As written, for 
+almost all of the proposal (until you talk about actually designing 
+control policies on page 20) 
+autonomy for control and autonomy design to 
+influence information flow seem like two separate things that just have 
+a single overloaded word referring to them both. 
+	So are you implying that they are not? or that they are and words should be chosen carefully. 
+
+Once you dive into the research questions, I think this gets too dense 
+for Chapter 1. I'd recommend giving these RQs a light touch, high-level 
+treatment in this chapter, and moving more of the detailed content to 
+Chapter 4.
+	Can be done. Summarise the questions in Chapter 1. And then move the meat of the content to the beginning of each study description. 
+
+
+	What does it mean to say "...design of autonomy can be thought of as appropriately timed \textit{interventions} at specific parts of model, with an intention to alter the bi-directional information flow between the human and machine. "
+
+	This statement is wrong in the sense that. an engineer sits with the model in front of him. And as the model unfolds in time the engineer observes how the values evolve in time. At any time t, for those nodes which can be exogenously intervened the engineer might or might not make an external intervention. if the engineer does so, the intervention will have an effect on the information flow between the nodes. The interventions could be chosen in such a way that the information flow is according to some prescribed criteria. 
+	it is not the engineer that does this. It is the autonomy, the autonomous agency that makes decisions to intervene at the various nodes of the model. This model is maintained in the 'memory' of the robot's brain? Sensors on the robot can sense some aspects of the environment and update the values of some of the nodes in the model. Some of the nodes can be directly intervened by the autonomy which in turn can alter the information flow between the nodes. 
+
+	Design of autonomy refers to how to design the autonomy's decision making mechanism. What is decision making? 
+
+	given the current state of the environment and the robot itself, the autonomy produces an action. it is a function mapping from states to actions. There are different possibilities for what this function should be? The DESIGNER gets to decide what function should be used? It is possible that the designer, rather than hard coding the function will set up a learning algorithm that will learn this function directly from data or setup an optimization based algorithm that will perform optimization and converge to an optimal function. 
+	What is the interpretation of autonomy?
+		Autonomy is the agency that decides what the robot should be doing (which is typically move in space at specific times). Or in other words it executes the policy (mappings from states to actions). Autonomy is the 'brain' that controls the motion (and other aspects such as when to communicate, what to communicate maybe via speech or visual signals.) of the robot. Autonomy makes decisions to move the robot in specific ways based on different needs (could be task-specific) /purposes and goals.
+		When interacting with humans, claim is that the autonomy (in addition to satisfying objective needs of task perfornmance etc) need to improve the transparency of its own policy(?) (that result in robot motion) so that the human partner better understands the context and why the robot is doing what its doing. 
+	What is 'design of autonomy'? 
+	Design of autonomy is done by the engineer who designs the brain of the robot. And decides how this brain should work/learn? The engineer should design the brain in such a way in addition to task accomplishment and all that it should 1) know when to intervene in time 2) have a quantitative notion of bidirectional information flow between itself and the human so that it can alter the information flow (and therefore improve the transparency of its own intentions). 
+
+	Different choices of policy (that is mapping from state to actions) for the 'robot brain a.k.a autonomy' can have different effects on the information flow between the 'robot (or autonomy?)' and the 
+
+
+
+Chapter 2:
+
+This is essentially the Background / Related Lit chapter, so it could be 
+helpful (to the reader) to have words like that in the chapter title.
+	Change chapter title.
+
+Take a careful pass through this chapter with an eye out for when you do 
+and do not call out a name when citing a reference, checking for 
+consistency across the chapter.
+	Can be done. Maybe use names? 
+
+"I strongly think...": avoid language like this. (That you believe it is 
+a given, since you write it.) If you need to say something stronger than 
+just the statement itself, like it is something that "this proposal 
+posits" or "hypothesizes" or "claims", use language like that instead.
+	Ok look for it. 
+
+
+Chapter 3:
+
+Figure 1: Is w_t really "robot" state... shouldn't be "world" state? 
+(Because information is observed about more than just the robot.) Do a 
+careful pass through the caption and make sure the variables all exactly 
+match the figure. Right now many are missing t subscripts, and a few 
+have subscripts that should be superscripts.
+
+	Can be done.
+3.2.1, all equations: Omega is undefined.
+	Define the state space variable - done
+3.2.1, 3rd equation: Should the first p(x,y) be p(x|y)?
+	What is written is correct - Correct
+
+3.2.1, final equations: I wasn't able to quickly follow all of the steps 
+in this derivation, and did not fully write it out to confirm that it is 
+correct (just FYI).
+	It is correct, I am pretty sure. Double check,
+
+3.2.1, footnote 2: Move it to the right of the period (so it doesn't 
+look squared).
+	ok can be done
+
+3.2.2: Why the switch from t to n?
+	n indicating discrete steps. Needn't be time always. It could be any type of index. Typically time. 
+
+3.2.2: I don't know what a "process realization" is (and therefore the 
+difference between x and X). Is it just concrete instances of the RV?
+	concrete instances of RV. Maybe use that word instead of process realizations? 
+
+First TE equation: Why x_{n+1} is not bolded, but the x_n^k is, is 
+unclear to me.
+	one of them is the embedded vector, whereas 
+
+Second TE equation: What is I?
+	Mutual information
+
+3.2.3, equation: Is ||.|| really the "maximum" distance? (...maximum 
+over what? Each vector dimension?)
+	Maximum over the samples? Clarify with john Lizier's work., 
+	
+
+Chapter 4:
+
+This chapter is a bit light. You don't need more details about the 
+studies, but it comes off as *all* of your contributions being only 
+about studies. What about the theoretical and algorithmic contributions? 
+These need to be anchored to this section as well. 
+	Ok. Talk about the main is
+I think some of 
+Chapter 1 should migrate to this chapter (along with perhaps being 
+fleshed out a bit more) 
+	ok think about how all RQ details could be moved here and what additional information needs to be added. 
+
+Eq. 1: This needs to back reference the equation where TE was defined 
+(which needs an equation number).
+	ok
+
+4.1.1: I think your "overarching goal" needs to be reworded... is the 
+study really developing a metric?
+	It is to quantify transparency in terms of information theoretic concepts. So part of it is about developing metric that can quantify and transparency between human and machine. 
+
+4.1.2: "robot-to-human"... do you mean "autonomy-to-human"?
+	Yes
+
+4.1.2: Why are you not also looking at the predictability of the robot's 
+actions?
+	The autonomy's actions are what we control. which indirectly affects how the human's take actions. humans 
+
+Figure 2: This image can be _a lot_ smaller (also cut off some black 
+from the bottom?). I thought this design also was going to be changed, 
+so that the human couldn't just mimic the robot's motion?
+	Yes. Put in the new image. 
+
+4.1.3: How were the "independent factors" chosen? How will you measure 
+"more predictable"?
+	Good question. Maybe have a pilot study where we show people different levels of independent factor and have them evaluate the predictability of actions. Need to clarify? is there literature that can support this. higher transparency of intent can result in bette predictability. Refer to the transparency review paper. 
+
+4.2.1, "issue" 2: I think this is your definition of "cognitively hard 
+states", no? (And not a general definition.) If so, add "we define".
+	'We define' was included in the first statement. Make it more clear in the second sentence,
+
+4.2.2: Unclear who is controlling the robot when the task-phase 
+information density map is being generated. (Needs to be an expert or 
+planner to reach all important parts of the state space, no? Or rather, 
+if the learner can generate this map, then they would no longer need 
+help with learning...
+	No, the task-phase information density map reveals how the users execute the task and therefore the cognitively hard states as well as parts of state spaces that are ignored etc. We need this information to understand the shortcomings of how the user executes the task and evalaute where the user might need more practice. 
+	
+
+4.3.2, first paragraph: This sounds like the definition of legibility... 
+(And I thought what was being measured is the predictability of the 
+human actions?)
+
+	No, we are measuring transparency. 
+
+4.3.2: It seems there are a lot of potential contributions here, beyond 
+what you are citing as the point of the study. (e.g. the model of the 
+human's policy)
+	data driven model of human policy?
+
+4.3.2: What will be the form of the arbitration function? (Or will you 
+investigate many? In which case say that.)
+	could be combined? 
+
+Chapter 5:
+
+Timeline needs to be updated.
+
+Passport
+Toothbrush
+Chappals
+Shoes. 
+Underwear.
+Regular shirts 2 - Tshirts 2, jeans, adidas, 
