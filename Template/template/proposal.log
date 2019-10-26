@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  10 SEP 2019 13:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  25 OCT 2019 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -66,6 +66,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
 ))
+changes-option 'final'
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -815,15 +816,15 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 325.
  [14] [15]
-[16] <./figures/samplePic.png, id=80, 804.00375pt x 522.95375pt>
-File: ./figures/samplePic.png Graphic file (type png)
+[16] <./figures/TransPic.png, id=80, 797.98125pt x 602.25pt>
+File: ./figures/TransPic.png Graphic file (type png)
 
-<use ./figures/samplePic.png>
-Package pdftex.def Info: ./figures/samplePic.png used on input line 403.
-(pdftex.def)             Requested size: 469.75499pt x 305.5397pt.
- [17] [18 <./figures/samplePic.png>] [19] [20]
+<use ./figures/TransPic.png>
+Package pdftex.def Info: ./figures/TransPic.png used on input line 404.
+(pdftex.def)             Requested size: 281.85585pt x 212.72046pt.
+ [17 <./figures/TransPic.png>] [18] [19] [20]
 [21] [22] [23]
-Overfull \hbox (21.48909pt too wide) in paragraph at lines 716--735
+Overfull \hbox (21.48909pt too wide) in paragraph at lines 724--743
  [] 
  []
 
@@ -837,11 +838,11 @@ Missing character: There is no ” in font ptmr7t!
 
  [28] (./proposal.aux) ) 
 Here is how much of TeX's memory you used:
- 13523 strings out of 495028
- 226919 string characters out of 6181497
- 396691 words of memory out of 5000000
- 16000 multiletter control sequences out of 15000+600000
- 63622 words of font info for 371 fonts, out of 8000000 for 9000
+ 13527 strings out of 495028
+ 226950 string characters out of 6181497
+ 396686 words of memory out of 5000000
+ 15998 multiletter control sequences out of 15000+600000
+ 64106 words of font info for 375 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,10n,51p,10405b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
@@ -862,7 +863,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
 texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on proposal.pdf (31 pages, 343028 bytes).
+Output written on proposal.pdf (31 pages, 343882 bytes).
 PDF statistics:
  180 PDF objects out of 1000 (max. 8388607)
  125 compressed objects within 2 object streams
